@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>tao form lay survey khach hang</title>
+</head>
+<body>
+<form>
+  <h1>Market Research Survey</h1>
+  Please take a few moments to complete this satisfaction survey
+  <hr>
+  <label>What is your age range?</label>
+  <select>
+    <option>18-24</option>
+    <option>24-30</option>
+    <option>30-36</option>
+    <option>36-42</option>
+    <option>42-48</option>
+    <option>48-54</option>
+    <option>54-60</option>
+  </select>
+  <br>
+  <label>What is your yearly income range?</label>
+  <select>
+    <option>$0-$25,000</option>
+    <option>$25,000-$50,000</option>
+    <option>$50,000-$100,000</option>
+    <option>>$100,000</option>
+  </select>
+  <br>
+  <label>Gender</label>
+  <input type="radio" name="gender"/>Male<br>
+  <input type="radio" name="gender"/>Female
+  <br>
+  <label>Which of following products have your purchased in the last 2 months. Please check all that apply</label>
+  <input type="checkbox" name="product"/>Product 1<br>
+  <input type="checkbox" name="product"/>Product 2<br>
+  <input type="checkbox" name="product"/>Product 3
+  <br>
+  <label>How often would you use our product?</label>
+  <input type="radio" name="howoften"/>Daily<br>
+  <input type="radio" name="howoften"/>Weekly<br>
+  <input type="radio" name="howoften"/>Monthly
+  <br>
+  <label>What would you pay for the new product?</label>
+  <table>
+    <tr>
+      <td>$</td>
+      <td>
+        <form><input type="text" name="pricedollar"/></form>
+      </td>
+      <td>.</td>
+      <td>
+        <form><input type="text" name="pricecent"/></form>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Dollars</td>
+      <td></td>
+      <td>Cents</td>
+    </tr>
+  </table>
+  <label>What features would you like to see in the new product?</label>
+  <textarea cols="50" rows="4"></textarea><br>
+  <label>Please rate your level of agreement with the following statements.</label>
+  <table border="1" cellpadding="10">
+    <tr align="center">
+      <td></td>
+      <td>Strongly Disagree</td>
+      <td>Disagree</td>
+      <td>Agree</td>
+      <td>Strongly Agree</td>
+    </tr>
+    <tr>
+      <td>Our products are priced fairly.</td>
+      <td align="center">
+        <div>
+          <input type="radio" name="tof"/>
+        </div>
+        <div>1</div>
+      </td>
+      <td align="center">
+        <div><input type="radio" name="tof"/></div>
+        <div>2</div>
+      </td>
+      <td align="center">
+        <div><input type="radio" name="tof"/></div>
+        <div>3</div>
+      </td>
+      <td align="center">
+        <div><input type="radio" name="tof"/></div>
+        <div>4</div>
+      </td>
+    </tr>
+    <tr>
+      <td>Our products are high quality.</td>
+      <td align="center">
+        <div><input type="radio" name="tof"/></div>
+        <div>1</div>
+      </td>
+      <td align="center">
+        <div><input type="radio" name="tof"/></div>
+        <div>2</div>
+      </td>
+      <td align="center">
+        <div><input type="radio" name="tof"/></div>
+        <div>3</div>
+      </td>
+      <td align="center">
+        <div><input type="radio" name="tof"/></div>
+        <div>4</div>
+      </td>
+    </tr>
+    <tr>
+      <td>You would recommend our products to a friend or coworker.</td>
+      <td align="center">
+        <div><input type="radio" name="tof"/></div>
+        <div>1</div>
+      </td>
+      <td align="center">
+        <div><input type="radio" name="tof"/></div>
+        <div>2</div>
+      </td>
+      <td align="center">
+        <div><input type="radio" name="tof"/></div>
+        <div>3</div>
+      </td>
+      <td align="center">
+        <div><input type="radio" name="tof"/></div>
+        <div>4</div>
+      </td>
+    </tr>
+  </table>
+  <input type="submit" name="submit"/>
+</form>
+</body>
+</html>
