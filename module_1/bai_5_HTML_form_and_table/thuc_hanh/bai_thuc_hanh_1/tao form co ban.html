@@ -2,39 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>tạo form cơ bản</title>
+  <title>Tạo form cơ bản</title>
 </head>
 <body>
   <h2>Order form</h2>
   <form>
-    <p>What would you like to buy?</p>
+    <label>What would you like to buy?</label><br>
     <select>
-      <option type="radio">A</option>
-      <option type="radio">B</option>
-      <option type="radio">C</option>
-      <option type="radio">D</option>
+      <option type="radio"/>A</option>
+      <option type="radio"/>B</option>
+      <option type="radio"/>C</option>
+      <option type="radio"/>D</option>
     </select>
   </form>
   <form>
-    How many would you like to order?<br>
-    <labor><input type="radio"/>1-$10</labor><br>
-    <labor><input type="radio"/>2-$20</labor><br>
-    <labor><input type="radio"/>3-$25</labor>
+    <label>How many would you like to order?</label><br>
+    <label><input type="radio" name="price" checked/>1-$10</label><br>
+    <label><input type="radio" name="price"/>2-$20</label><br>
+    <label><input type="radio" name="price"/>3-$25</label>
   </form>
   <form>
-    Name<br> <input type="text" value="FirstName"/> <input type="text" value="LastName"/>
+    <label>Name</label><br> <input type="text" placeholder="FirstName" name="firstname"/> <input type="text" placeholder="LastName" name="lastname"/>
   </form>
   <form>
-    Email<br> <input type="text"/>
+    <label>Email</label><br> <input type="text" name="Email"/>
   </form>
   <form>
-    Phone Number<br>
-    <input type="text"/>
-    <input type="text"/>
-    <input type="text"/>
+    <label>Phone Number</label><br>
+    <input type="text" name="phonenumber"/>
+    <input type="text" name="phonenumber"/>
+    <input type="text" name="phonenumber"/>
   </form>
   <form>
-    <input type="submit" value="Submit"/>
+    <input type="submit" value="Submit" name="submit"/>
   </form>
 </body>
 </html>
