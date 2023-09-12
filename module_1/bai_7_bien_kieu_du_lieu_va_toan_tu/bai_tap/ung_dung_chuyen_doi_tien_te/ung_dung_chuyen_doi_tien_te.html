@@ -49,27 +49,27 @@
         let d = document.getElementById("to").value;
         if ((c === "VND" && d === "$")) {
             b = a / 24099;
-            document.getElementById("res").innerHTML = "Result: " + b
+            document.getElementById("res").innerHTML = "Result: " + b + "$"
         }
         if ((c === "VND" && d === "Baht")) {
             b = a / 677.92;
-            document.getElementById("res").innerHTML = "Result: " + b
+            document.getElementById("res").innerHTML = "Result: " + b + "Bath"
         }
         if ((c === "Baht" && d === "VND")) {
             b = 677.92 * a;
-            document.getElementById("res").innerHTML = "Result: " + b
+            document.getElementById("res").innerHTML = "Result: " + b +"VND"
         }
         if ((c === "Baht" && d === "$")) {
             b = a / 35.545;
-            document.getElementById("res").innerHTML = "Result: " + b
+            document.getElementById("res").innerHTML = "Result: " + b +"$"
         }
         if ((c === "$" && d === "VND")) {
             b = 24099 * a;
-            document.getElementById("res").innerHTML = "Result: " + b
+            document.getElementById("res").innerHTML = "Result: " + b + "VND"
         }
         if ((c === "$" && d === "Baht")) {
             b = 35.545 * a;
-            document.getElementById("res").innerHTML = "Result: " + b
+            document.getElementById("res").innerHTML = "Result: " + b + "Bath"
         }
     }
 </script>
