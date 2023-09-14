@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+<body>
+    <script>
+        let nam=+prompt("Nhập năm: ");
+        if (nam%100===0){
+            if (nam%400) document.write("Năm nay là năm nhuận");
+            else document.write("Năm nay không phải là năm nhuận");}
+        else{
+            if (nam%4===0) document.write("Năm nay là năm nhuận");
+            else document.write("Năm nay không phải là năm nhuận");}
+    </script>
+</body>
+</html>

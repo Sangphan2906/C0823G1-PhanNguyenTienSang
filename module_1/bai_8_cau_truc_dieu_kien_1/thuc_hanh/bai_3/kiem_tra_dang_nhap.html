@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra đăng nhập</title>
+</head>
+<body>
+    <script>
+        let a= prompt("Nhập tên đăng nhập: ");
+        if (a==="Admin") {
+            let b = prompt("Nhập mật khẩu: ");
+            switch (b) {
+                case "TheMaster":
+                    alert("Welcome");
+                    break;
+                case null:
+                    alert("Canceled");
+                    break;
+                default:
+                    alert("Wrong password");
+                    break;
+            }
+        else
+            if (a===null) alert("Canceled");
+            else alert("I don't know you");
+        }
+    </script>
+</body>
+</html>
