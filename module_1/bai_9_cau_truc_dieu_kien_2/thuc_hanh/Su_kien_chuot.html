@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="Vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện chuột</title>
+</head>
+<body>
+    <form>
+        <button id="box" type="button" onclick="move()"><img src="quá%20bóng.png" alt="Quả bóng" style="width: 100px; height: 100px"></button>
+    </form>
+    <p>Nhấn vào quả bóng</p>
+    <script>
+        let bong=document.getElementById("box");
+        function move(){
+            bong=document.getElementById("box");
+            bong.style.right= parseInt(bong.style.right)+ 100 + "px";
+        }
+    </script>
+</body>
+</html>
