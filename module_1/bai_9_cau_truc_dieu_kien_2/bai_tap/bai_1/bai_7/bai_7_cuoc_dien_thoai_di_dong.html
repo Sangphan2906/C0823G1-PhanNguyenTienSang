@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Cước điện thoại di động</title>
+</head>
+<body>
+    <script>
+        /* gói cước tomato: nội mạng (1.590/ phút) hoặc ngoại mạng (1.790đ/ phút
+           gói cước economy: nội mạng (1.190đ/ phút) hoặc ngoại mạng (1.390đ/ phút)
+         */
+        let a= prompt("Gói cước bạn sử dụng: ");
+        let b= prompt("Dịch vụ bạn sử dụng: ");
+        if (a==="tomato" || a==="Tomato") {
+            if (b==="Nội mạng" || b=== "nội mạng") alert("1.590đ/phút");
+            else if (b==="Ngoại mạng" || b==="ngoại mạng") alert("1790/phút");}
+        else {
+            if (a==="economy"||a==="Economy"){
+                if (b==="nội mạng"||b==="Nội mạng") alert("1190/phút");
+                else if (b==="ngoại mạng"||b==="Ngoại mạng") alert("1390/phút")
+            }
+            }
+    </script>
+</body>
+</html>

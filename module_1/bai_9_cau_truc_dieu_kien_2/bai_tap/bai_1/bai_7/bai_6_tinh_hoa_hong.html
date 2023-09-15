@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền hoa hồng</title>
+</head>
+<body>
+    <script>
+        let dt= +prompt("Nhập doanh thu của bạn: ");
+        let tl;
+        let hh;
+        if (dt>10000){
+            if (dt<50000) tl=30/100;
+            else tl=40/100;
+        }
+        else tl=20/100;
+        hh=tl*dt;
+        alert("Hoa hồng của bạn là: "+hh+"$");
+    </script>
+</body>
+</html>

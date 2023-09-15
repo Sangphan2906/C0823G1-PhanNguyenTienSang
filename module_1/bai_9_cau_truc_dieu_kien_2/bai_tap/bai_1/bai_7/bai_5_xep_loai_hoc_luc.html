@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp loại học lực</title>
+</head>
+<body>
+    <script>
+        let a1= +prompt("Nhập điểm kiểm tra môn Toán: ");
+        let b1= +prompt("Nhập điểm kiểm tra môn Văn: ");
+        let c1= +prompt("Nhập điểm điểm kiểm tra môn Anh: ");
+        let a2= +prompt("Nhập điểm thi giữa kỳ môn Toán: ");
+        let b2= +prompt("Nhập điểm thi giữa kỹ mồn Văn: ");
+        let c2= +prompt("Nhập điểm thi giữa kỳ môn Anh: ");
+        let a3= +prompt("Nhập điểm thi cuối kỳ môn Toán: ");
+        let b3= +prompt("Nhập điểm thi cuối kỳ môn Văn: ");
+        let c3= +prompt("Nhập điểm thi cuối kỳ môn Anh: ");
+        let tb= ((a1+b1+c1) + (a2+b2+c2)*2 + (a3+b3+c3)*3)/18;
+        if (tb>=5){
+            if (tb<6.5) alert("Học lực của bạn là trung bình");
+            else {
+                if (tb<8) alert("Học lực của bạn là khá");
+                else alert("Học lực của bạn là giỏi");
+            }
+        }
+        else alert("Học lực của bạn là yếu");
+    </script>
+</body>
+</html>
