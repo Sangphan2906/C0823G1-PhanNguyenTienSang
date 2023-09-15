@@ -15,29 +15,21 @@
         function tinh(){
             a= +document.getElementById("sothang").value
             switch (a){
-                case 1: document.getElementById("hienthi").innerHTML= "Tháng 1 có 31 ngày";
-                    break;
-                case 2: document.getElementById("hienthi").innerHTML= "Tháng 2 có 28 hoặc 29 ngày";
-                    break;
-                case 3: document.getElementById("hienthi").innerHTML= "Tháng 3 có 31 ngày";
-                    break;
-                case 4: document.getElementById("hienthi").innerHTML= "Tháng 4 có 30 ngày";
-                    break;
-                case 5: document.getElementById("hienthi").innerHTML= "Tháng 5 có 31 ngày";
-                    break;
-                case 6: document.getElementById("hienthi").innerHTML= "Tháng 6 có 30 ngày";
-                    break;
+                case 1:
+                case 3:
+                case 5:
                 case 7:
-                case 8: document.getElementById("hienthi").innerHTML= "Tháng " + a + " có 31 ngày";
+                case 8:
+                case 10:
+                case 12: document.getElementById("hienthi").innerHTML="Tháng "+a+" có 31 ngày";
                     break;
-                case 9: document.getElementById("hienthi").innerHTML= "Tháng 9 có 30 ngày";
+                case 4:
+                case 6:
+                case 9:
+                case 11: document.getElementById("hienthi").innerHTML="Tháng "+a+" có 30 ngày";
                     break;
-                case 10: document.getElementById("hienthi").innerHTML= "Tháng 10 có 31 ngày";
-                    break;
-                case 11: document.getElementById("hienthi").innerHTML= "Tháng 11 có 30 ngày";
-                    break;
-                case 12: document.getElementById("hienthi").innerHTML= "Tháng 12 có 31 ngày";
-                    break;
+                case 2: document.getElementById("hienthi").innerHTML="Tháng 2 có 28 hoặc 29 ngày";
+                break;
             }
         }
     </script>

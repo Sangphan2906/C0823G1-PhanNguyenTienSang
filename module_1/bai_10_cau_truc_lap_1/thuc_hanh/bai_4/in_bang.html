@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In bảng</title>
+</head>
+<body>
+<script>
+    var a = 0;
+    var l = 0
+    var s;
+    s = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+    for (i = 1; i <= 10; i++) {
+        s = s + "<tr>";
+        for (i, a=0, l=0; l<10;)
+        {
+            a+=i;
+            l++;
+            s=s+"<td>";
+            s+=a;
+            s=s+"</td>";
+        }
+        s=s+"</tr>";
+    }
+    s= s+"</table>";
+    console.log(s)
+    document.write(s);
+</script>
+</body>
+</html>
