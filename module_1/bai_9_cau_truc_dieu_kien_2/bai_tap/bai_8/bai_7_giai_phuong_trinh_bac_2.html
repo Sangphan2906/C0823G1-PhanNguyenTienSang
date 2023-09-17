@@ -13,8 +13,11 @@
         let delta=b*b-4*a*(c-d);
         let e=(-b+ Math.sqrt(delta))/(2*a);
         let f=(-b-Math.sqrt(delta))/(2*a);
-        alert("nghiệm đầu tiên là: ",+e);
-        alert("nghiệm thứ hai là: ",+f);
+        if (delta<0) alert("Phương trình vô nghiệm");
+        else {
+            if (delta===0) alert("Phương trình có nghiệm kép là: "+f);
+            else alert("Phương trình có 2 nghiệm là: "+e+" và "+f)
+        }
     </script>
 </body>
 </html>
