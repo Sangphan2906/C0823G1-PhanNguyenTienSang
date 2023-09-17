@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+    <script>
+        // Tính thuế với hai đối tượng là lớn hơn 50 triệu đồng và nhỏ hơn 50 triệu đồng
+        let a=+prompt("Số tiền lương của bạn ( đơn vị: nghìn đồng): ");
+        let b=+prompt("Thuế suất (bao nhiêu phần trăm): ");
+        let mienthue1= 500;
+        let mienthue2= 200;
+        let giamtru1= 500;
+        let giamtru2=  200;
+        if (a<50000) alert("Thuế thu nhập cá nhân của bạn là: "+ ((a-mienthue1-giamtru1)*(b/100)));
+        else alert("Thuế thu nhập cá nhân của bạn là: "+ ((a-mienthue2 -giamtru2)*(b/100)));
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra điều kiện về cạnh của tam giác</title>
+</head>
+<body>
+    <script>
+        let a=+prompt("Nhập độ dài cạnh thứ nhất của tam giác: ");
+        let b=+prompt("Nhập độ dài cạnh thứ hai của tam giác: ");
+        let c=+prompt("Nhập độ dài cạnh thứ ba của tam giác: ");
+        if (a>0 && b>0 && c>0 && (a+b)>c && (b+c)>a && (a+c)>b) alert("Đây là 3 cạnh của tam giác");
+        else alert("Độ dài cạnh của tam giác không hợp lệ");
+    </script>
+</body>
+</html>

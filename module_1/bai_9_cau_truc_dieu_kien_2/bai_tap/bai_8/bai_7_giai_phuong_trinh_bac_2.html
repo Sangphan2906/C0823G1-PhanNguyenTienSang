@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+    <script>
+        let a=parseFloat(prompt("Nhập hệ số a: "));
+        let b=parseFloat(prompt("Nhập hệ số b: "));
+        let c=parseFloat(prompt("Nhập hệ số c: "));
+        let d=parseFloat(prompt("Nhập giá trị d: "));
+        let delta=b*b-4*a*(c-d);
+        let e=(-b+ Math.sqrt(delta))/(2*a);
+        let f=(-b-Math.sqrt(delta))/(2*a);
+        alert("nghiệm đầu tiên là: ",+e);
+        alert("nghiệm thứ hai là: ",+f);
+    </script>
+</body>
+</html>

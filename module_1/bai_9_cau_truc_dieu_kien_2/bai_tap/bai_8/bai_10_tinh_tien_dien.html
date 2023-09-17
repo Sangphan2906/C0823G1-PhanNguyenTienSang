@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền điện</title>
+</head>
+<body>
+    <script>
+        let a=+prompt("Nhập mức điện bạn dùng (kWh): 0-50, 51-100, 101-200, 201-300, 301-400, 400 trở lên: ");
+        let b=+prompt("Nhập ố kWh mà bạn dùng: ");
+        if (a>50){
+            if (a<=100) alert("Số tiền điện của bạn là: "+b*1786+" đồng");
+            else {
+                if (a<=200) alert("Số tiền điện của bạn là: "+b*2074+" đồng");
+                else {
+                    if (a<=300) alert("Số tiền điện của bạn là: "+b*2612+" đồng");
+                    else {
+                        if (a<=400) alert("Số tiền điện của bạn là: "+b*2919+" đồng");
+                        else alert("Số tiền điện của bạn là: "+b*3015+" đồng");
+                    }
+                }
+            }
+        }
+        else alert("Số tiền điện của bạn là: "+b*1728+" đồng");
+    </script>
+</body>
+</html>
