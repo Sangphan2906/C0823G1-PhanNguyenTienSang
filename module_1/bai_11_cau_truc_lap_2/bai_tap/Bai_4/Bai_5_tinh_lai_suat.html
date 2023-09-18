@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi suất</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập thời gian bạn muốn gửi (theo năm): ");
+    let b = +prompt("Nhập số tiền bạn muốn gửi: ");
+    let c=b;
+    for (i=1;i<=a;i++){
+        c=c*(1+6.3/100);
+    }
+    document.write("Số tiền lãi của bạn là: "+c);
+</script>
+</body>
+</html>

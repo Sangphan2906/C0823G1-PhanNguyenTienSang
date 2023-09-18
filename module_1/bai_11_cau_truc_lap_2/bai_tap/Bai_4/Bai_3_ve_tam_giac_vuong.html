@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ tam giác vuông</title>
+</head>
+<body>
+    <script>
+        for (i=1; i<=5; i++){
+            for (l=1, s="";l<=i;l++){
+                s+="*";
+            }
+            document.write(s+"<br>")
+        }
+        document.write("<br>"+"<br>");
+        for (i=5; i>0; i--){
+            for (l=1, s="";l<=i;l++){
+                s+="*";
+            }
+            document.write(s+"<br>");
+        }
+        document.write("<br>"+"<br>");
+        for (i=1; i<=5;i++){
+            for (l=1,s="";l<=(5-i);l++){
+                s+="&nbsp&nbsp"
+            }
+            document.write(s);
+            for (t=1,p="";t<=i;t++){
+                p+="*";
+            }
+            document.write(p+"<br>");
+        }
+        document.write("<br>"+"<br>");
+        for (i=5;i>=1;i--){
+            for (l=1, s=""; l<=(5-i); l++){
+                s+="&nbsp&nbsp";
+            }
+            document.write(s);
+            for (t=1, p=""; t<=i; t++){
+                p+="*";
+            }
+            document.write(p+"<br>");
+        }
+    </script>
+</body>
+</html>

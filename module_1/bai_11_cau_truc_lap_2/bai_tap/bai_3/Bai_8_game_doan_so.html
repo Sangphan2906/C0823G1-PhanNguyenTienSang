@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<form>
+    <table align="center">
+        <tr>
+            <th colspan="2">
+                Game đoán số
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="choi()">Chơi</button>
+            </td>
+            <td>
+                <button type="reset">Chơi lại</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+    function choi() {
+        let a = +prompt("Nhập khoảng bạn muốn đoán số: trong khoảng 0-50 nhập số 50,  trong khoảng 0-100 nhập số 100, trong khoảng 0-500 nhập số 500. Để thoát nhập số -1");
+        let b = Math.floor(Math.random() * (a + 1));
+        while (a!==-1) {
+            let c= +prompt("Nhập số mà bạn đoán (Nếu muốn thoát nhập -1): ");
+            if (c!==-1){
+                if (c===b) alert("Chúc mừng! Bạn đã đoán trúng!");
+                else c= +prompt("Bạn đã đoán sai! Hãy đoán lại (nhập -1 nếu muốn thoát): ");
+            }
+            if (c===-1) break;
+        }
+    }
+</script>
+</body>
+</html>

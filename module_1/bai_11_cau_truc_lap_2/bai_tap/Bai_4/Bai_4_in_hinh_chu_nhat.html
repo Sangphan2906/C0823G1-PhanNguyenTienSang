@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>In hình chữ nhật</title>
+</head>
+<body>
+    <script>
+        let a=+prompt("Nhập chiều dài: ");
+        let b=+prompt("Nhập chiều rộng: ");
+        for (i=1;i<=b;i++){
+            if (i>1 && i<b){
+                document.write("*");
+                for (t=1, p="";t<=(a-2);t++){
+                    p+="&nbsp&nbsp";
+                }
+                document.write(p);
+                document.write("*"+"<br>");
+            }
+            else {
+                for (l = 1, s = ""; l <= a; l++) {
+                    s += "*";
+                }
+                document.write(s + "<br>");
+            }
+        }
+    </script>
+</body>
+</html>

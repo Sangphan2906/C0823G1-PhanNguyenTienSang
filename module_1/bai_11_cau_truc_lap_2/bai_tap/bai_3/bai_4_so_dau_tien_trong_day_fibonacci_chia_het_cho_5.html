@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Số đầu tiên trong dãy fibonacci chia hết cho 5</title>
+</head>
+<body>
+    <script>
+        let a=0;
+        let b=1;
+        let c;
+        while (true){
+            if (a%5===0) {
+                alert("Số "+a+" là số đầu tiên trong dãy fibonacci chia hết cho 5");
+                break;
+            }
+            else{
+                c=a+b;
+                a=b;
+                b=c;
+            }
+        }
+    </script>
+</body>
+</html>
