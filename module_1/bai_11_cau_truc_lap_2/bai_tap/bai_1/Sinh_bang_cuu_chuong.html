@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        let i, l;
+        let s ="<table border='1' align='left'>";
+        for (i=1;i<10;i++){
+            s=s+"<tr>"
+            for (l=2;l<10;l++){
+                s=s+"<td>"
+                s+= l+'x'+i+'='+(l*i);
+                s=s+"</td>"
+            }
+            s=s+"</tr>"
+        }
+        s=s+"</table>";
+        document.write(s);
+    </script>
+</body>
+</html>

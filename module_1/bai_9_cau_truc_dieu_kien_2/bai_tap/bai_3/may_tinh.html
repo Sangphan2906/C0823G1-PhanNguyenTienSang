@@ -1,45 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Mát tính</title>
+    <title>Máy tính</title>
     <style>
         table, th,td {
             border: 1px;
             border-spacing: 3px;
         }
-
     </style>
 </head>
 <body>
     <form>
         <table>
-            <tr><th colspan="4"><label><input type="text"></label></th></tr>
+            <tr><td colspan="4"><label><input type="text" id="result"></label></td></tr>
             <tr>
-                <td><button>1</button></td>
-                <td><button>2</button></td>
-                <td><button>3</button></td>
-                <td><button>+</button></td>
+                <td><button type="button" value="1" onclick="nhap('1')">1</button></td>
+                <td><button type="button" value="2" onclick="nhap('2')">2</button></td>
+                <td><button type="button" value="3" onclick="nhap('3')">3</button></td>
+                <td><button type="button" value="+" onclick="nhap('+')">+</button></td>
             </tr>
             <tr >
-                <td><button>4</button></td>
-                <td><button>5</button></td>
-                <td><button>6</button></td>
-                <td><button>-</button></td>
+                <td><button type="button" value="4" onclick="nhap('4')">4</button></td>
+                <td><button type="button" value="5" onclick="nhap('5')">5</button></td>
+                <td><button type="button" value="6" onclick="nhap('6')">6</button></td>
+                <td><button type="button" value="-" onclick="nhap('-')">-</button></td>
             </tr>
             <tr>
-                <td><button>7</button></td>
-                <td><button>8</button></td>
-                <td><button>9</button></td>
-                <td><button>x</button></td>
+                <td><button type="button" value="7" onclick="nhap('7')">7</button></td>
+                <td><button type="button" value="8" onclick="nhap('8')">8</button></td>
+                <td><button type="button" value="9" onclick="nhap('9')">9</button></td>
+                <td><button type="button" value="x" onclick="nhap('*')">x</button></td>
             </tr>
             <tr>
-                <td><button>C</button></td>
-                <td><button>0</button></td>
-                <td><button>=</button></td>
-                <td><button>/</button></td>
+                <td><button type="reset" value="reset">C</button></td>
+                <td><button type="button" value="0" onclick="nhap('0')">0</button></td>
+                <td><button type="button" value="=" onclick="xuat()">=</button></td>
+                <td><button type="button" value="/" onclick="nhap('/')">/</button></td>
             </tr>
         </table>
     </form>
+<script>
+    let str = "";
+    function nhap(data) {
+        str += data;
+        document.getElementById("result").value = str;
+    }
+    function xuat(){
+        let dapAn = eval(str);
+        document.getElementById("result").value = dapAn;
+    }
+</script>
 </body>
 </html>

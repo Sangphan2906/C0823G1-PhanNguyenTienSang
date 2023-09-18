@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị 20 số nguyên tố đầu tiên</title>
+</head>
+<body>
+    <script>
+        var i, l, snt, u;
+            for (i=2, snt=1; snt<=20; i++){
+                for (l=1, u=0; l<=i;l++){
+                    if ((i%l)===0) u+=1;
+                }
+                if (u===2) {
+                    snt+=1;
+                    document.write(i+"<br>");
+                }
+            }
+    </script>
+</body>
+</html>
