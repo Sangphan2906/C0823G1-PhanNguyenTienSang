@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <th colspan="4">Sample Screen:</th>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="number" name="value" id="value"></td>
+                <td><button type="button" onclick="them()">Add</button></td>
+                <td><button type="button" onclick="hthi()">Display</button></td>
+            </tr>
+        </table>
+    </form>
+<script>
+    let a=[];
+    function them(){
+        a.push(document.getElementById("value").value);
+
+    }
+    function hthi(){
+        for (i=0;i<a.length;i++){
+            document.write(a[i]+" ");
+        }
+    }
+</script>
+</body>
+</html>

@@ -6,11 +6,13 @@
 </head>
 <body>
     <script>
-        let a=+prompt("Nhập nhiệt độ hiện tại: ");
-        if (a<20) alert("Hãy tăng nhiệt độ");
-        else {
-            if (a<100) alert("Ổn");
-            else alert("Hãy giảm nhiệt độ");
+        let t=+prompt("Nhập nhiệt độ hiện tại: ");
+        if (t>=20 && t<=100) alert("Nhiệt độ phù hợp");
+        while (t<20 || t>100){
+            if (t<20) t= +prompt("Hãy tăng nhiệt độ lên");
+            else if (t>100)t= +prompt("Hãy giảm nhiệt độ xuống");
+            if (t<20 || t>100) continue;
+            else alert("Nhiệt độ phù hợp");
         }
     </script>
 </body>

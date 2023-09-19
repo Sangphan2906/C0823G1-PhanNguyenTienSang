@@ -24,15 +24,19 @@
 </form>
 <script>
     function choi() {
-        let a = +prompt("Nhập khoảng bạn muốn đoán số: trong khoảng 0-50 nhập số 50,  trong khoảng 0-100 nhập số 100, trong khoảng 0-500 nhập số 500. Để thoát nhập số -1");
-        let b = Math.floor(Math.random() * (a + 1));
-        while (a!==-1) {
-            let c= +prompt("Nhập số mà bạn đoán (Nếu muốn thoát nhập -1): ");
-            if (c!==-1){
-                if (c===b) alert("Chúc mừng! Bạn đã đoán trúng!");
-                else c= +prompt("Bạn đã đoán sai! Hãy đoán lại (nhập -1 nếu muốn thoát): ");
+        let a= +prompt("Nhập cận dưới: ");
+        let b= +prompt("Nhập cận trên: ");
+        let c = Math.round(Math.random()*(b-a)+a);
+        console.log(c);
+        let d= +prompt("Nhập số mà bạn đoán (nhập -1 để thoát): ");
+        let count=0;
+        while (count<=3 && d!==-1) {
+            if (d === c) { alert("Chúc mừng! Bạn đã đoán đúng!");
+                           break;}
+            else {
+                d = +prompt("Rất tiếc! Bạn đã nhập sai! Hãy đoán lại (nhập -1 để thoát): ");
+                count++;
             }
-            if (c===-1) break;
         }
     }
 </script>
