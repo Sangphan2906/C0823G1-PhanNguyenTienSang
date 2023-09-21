@@ -12,11 +12,19 @@
         <tr>
             <td></td>
             <td align="right"><button type="button" onclick="hienthi()">Yes</button></td>
-            <td><button type="button" onclick="move()">No</button></td>
+            <td><button type="button" id="1" onmouseover="move()">No</button></td>
         </tr>
     </table>
     <script>
-
+    function hienthi(){
+        alert("<3");
+    }
+    let a=document.getElementById("1")
+    a.style.position="relative";
+    a.style.left= "0px";
+    function move(){
+        a.style.left= parseInt(a.style.left)+ 10+ "px";
+    }
     </script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        let a = new Array(10);
+        for (i = 0; i < 10; i++) {
+            let c = +prompt("Nhập số nguyên: ");
+            a[i] = c;
+        }
+        console.log(a)
+        let d = +prompt("Nhập số nguyên bạn muốn kiểm tra có trong mảng không: ");
+        for (i = 0; i < 10; i++) {
+            if (a[i] === d ) {
+                a.splice(i, 1);
+                i--;
+            }
+        }
+        document.write(a);
+    </script>
+</body>
+</html>

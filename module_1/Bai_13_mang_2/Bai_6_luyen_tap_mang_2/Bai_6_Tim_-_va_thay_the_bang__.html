@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let a= prompt("Nhâp chuỗi: ");
+    let b=a.split("");
+    for (i=0;i<b.length;i++){
+        if (b[i]==="-") b[i]="_";
+    }
+    for (i=0;i<b.length;i++){
+        document.write(b[i]);
+    }
+</script>
+</body>
+</html>

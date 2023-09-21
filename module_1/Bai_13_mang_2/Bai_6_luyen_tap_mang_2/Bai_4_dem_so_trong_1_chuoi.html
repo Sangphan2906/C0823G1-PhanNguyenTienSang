@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số trong 1 chuỗi</title>
+</head>
+<body>
+<script>
+    let a= prompt("Nhập chuỗi: ");
+    let b= a.split("");
+    console.log(b);
+    count=0;
+    for (i=0;i<b.length;i++){
+        if (!isNaN(b[i]) && b[i]!==" ") count+=1;
+    }
+    document.write("Mảng có "+count+" ký tự số");
+</script>
+</body>
+</html>

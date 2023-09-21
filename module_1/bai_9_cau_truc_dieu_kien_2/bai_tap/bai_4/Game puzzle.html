@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Game puzzle</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td bgcolor="black" width="100" height="100" id="1" onclick="anh1()"></td>
+        <td bgcolor="white" width="100" height="100" id="2" onclick="anh2()"></td>
+        <td bgcolor="black" width="100" height="100" id="3" onclick="anh3()"></td>
+    </tr>
+    <tr>
+        <td bgcolor="white" width="100" height="100" id="4" onclick="anh4()"></td>
+        <td bgcolor="black" width="100" height="100" id="5" onclick="anh5()"></td>
+        <td bgcolor="white" width="100" height="100" id="6" onclick="anh6()"></td>
+    </tr>
+</table>
+
+<script>
+    function anh1(){
+        document.getElementById("1").innerHTML= "<img src=\"doraemon.png\" alt=\"Doraemon\" width=\"100\" height=\"100\">"
+    }
+    function anh2() {
+        document.getElementById("2").innerHTML = "<img src=\"Nobita.png\" alt=\"Nobita\" width=\"100\" height=\"100\">"
+            }
+    function anh3(){
+        document.getElementById("3").innerHTML="<img src=\"shizuka.jpg\" alt=\"Shizuka\" height=\"100\" width=\"100\">"
+    }
+    function anh4(){
+        document.getElementById("4").innerHTML= "<img src=\"Suneo.png\" alt=\"Suneo\" width=\"100\" height=\"100\">"
+    }
+    function anh5(){
+        document.getElementById("5").innerHTML= "<img src=\"chaien.jpg\" alt=\"Chaien\" width=\"100\" height=\"100\">"
+    }
+    function anh6(){
+        document.getElementById("6").innerHTML= "<img src=\"Dekisugi.jpg\" alt=\"dekisugi\" width=\"100\" height=\"100\">"
+        setTimeout(()=>{
+            alert("Hoàn thành")
+        },2000)
+
+    }
+    // let a= document.getElementById("6");
+    // a.addEventListener("click", printf)
+    // function printf(){
+    //     alert("Hoàn thành");
+    // }
+</script>
+</body>
+</html>

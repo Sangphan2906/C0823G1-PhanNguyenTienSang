@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chèn dấu - giữa hai số chẵn</title>
+</head>
+<body>
+    <script>
+        let a=[];
+        let b= +prompt("Nhập số lượng số bạn muốn nhập vào: ");
+        for (i=0;i<b;i++){
+            let c= +prompt("Nhập số: ");
+            a.push(c);
+        }
+        for (i=0;i<b;i++){
+            if (a[i]%2===0 && a[i+1]%2===0) document.write(a[i]+"-");
+            else document.write(a[i]);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi dạng chữ</title>
+</head>
+<body>
+    <script>
+        let a= prompt("Nhập chuỗi của bạn có chữ thường và chữ hoa: ");
+        a.split();
+        for (i=0;i<a.length;i++){
+            if (a.charCodeAt(i)>=65 && a.charCodeAt(i)<=90) document.write(a[i].toLowerCase());
+            else if (a.charCodeAt(i)>=97 && a.charCodeAt(i)<=122 ) document.write(a[i].toUpperCase());
+            else document.write(a[i]);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sắp xếp mảng</title>
+</head>
+<body>
+<script>
+    let a= new Array(10);
+    for (i=0;i<10;i++){
+        let b= +prompt("Nhập số của mảng: ");
+        a[i]=b;
+    }
+    a.sort((a,b)=> b-a);
+    for (i=0;i<10;i++){
+        if (i<9) document.write(a[i]+", ");
+        else document.write(a[i])
+    }
+</script>
+</body>
+</html>

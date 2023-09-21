@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>In đảo ngược</title>
+</head>
+<body>
+<script>
+    let a=[];
+    let d;
+    let s="Mảng sau khi đảo ngược là: "
+    let b= +prompt("Nhập số lượng phần tử của mảng bạn muốn tạo: ");
+    for (i=0;i<b;i++){
+        let c= prompt("nhập giá trị phần tử của mảng");
+        a.push(c);
+    }
+    document.write("Mảng ban đầu là: "+a+"<br>");
+    for (i=0;i<(a.length-1)/2;i++){
+        c=a[i];
+        a[i]=a[a.length-1-i];
+        a[a.length-1-i]=c;
+    }
+    for (i=0;i<a.length;i++){
+        s+=a[i]
+    }
+    document.write(s);
+</script>
+</body>
+</html>

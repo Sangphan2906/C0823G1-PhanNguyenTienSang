@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số nguyên âm trong chuỗi</title>
+</head>
+<body>
+<script>
+    let a= prompt("Nhập chuỗi: ");
+    a.split();
+    count=0;
+    for (i=0;i<a.length;i++){
+        switch (a[i]){
+            case "u":
+            case "e":
+            case "o":
+            case "a":
+            case "i": count+=1;
+            break;
+        }
+    }
+    document.write("Trong chuỗi có "+count+" nguyên âm");
+</script>
+</body>
+</html>

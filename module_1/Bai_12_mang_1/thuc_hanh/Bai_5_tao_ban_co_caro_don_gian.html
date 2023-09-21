@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo bàn cờ caro đơn giản</title>
+</head>
+<body>
+    <script>
+        let e=[];
+        let f=[];
+        let g;
+        function hienThi(){
+
+        }
+        let a= +prompt("Nhập số hàng của bàn cờ caro: ");
+        let b= +prompt("Nhập số cột của bàn cờ caro: ");
+        let c= new Array(a);
+        for (i=0;i<a;i++){
+            c[i]=[];
+            for(j=0;j<b;j++){
+                if (i===e && j===f) document.write(g);
+                else {
+                    c[i][j]=0;
+                    document.write(c[i][j]);
+                }
+            }
+            document.write("<br>");
+        }
+    document.write("<button type=\"button\" onclick=\"hienThi()\">Change Value</button>")
+    </script>
+</body>
+</html>

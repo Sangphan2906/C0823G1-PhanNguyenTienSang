@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra sự giống nhau của hai chuỗi</title>
+</head>
+<body>
+  <script>
+    let a= prompt("Nhập chuỗi 1: ");
+    let b= prompt("Nhập chuỗi 2: ");
+    let c=a.split("");
+    let d=b.split("");
+    count=0;
+    if (c.length===d.length){
+      for (i=0, j=0; i<c.length,j<d.length;i++,j++){
+        if (c[i]===d[j]) count+=1;
+      }
+      if (count===c.length) document.write("Hai chuỗi giống nhau");
+      else document.write("Hai chuỗi khác nhau");
+    }
+    else document.write("Hai chuỗi khác nhau");
+  </script>
+</body>
+</html>

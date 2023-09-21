@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra giá trị phần tử trong mảng</title>
+</head>
+<body>
+    <script>
+        let a=[];
+        let b;
+        let d= +prompt("Nhập số phần tử của mảng bạn muốn tạo: ");
+        for (i=0;i<=d-1;i++){
+            b= +prompt("Nhập giá trị của phần tử( số): ");
+            a[i]=b;
+        }
+        let c= +prompt("Nhập số bạn muốn tìm kiếm xem có trong mảng hay không: ");
+        for (i=0;i<=a.length-1;i++){
+            if (c===a[i]) document.write("Phần tử có giá trị bằng số bạn cần tìm ở vị trí "+i+"<br>")
+        }
+    </script>
+</body>
+</html>

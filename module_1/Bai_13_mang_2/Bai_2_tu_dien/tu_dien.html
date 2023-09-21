@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+    <h2>Từ điển</h2>
+    <form>
+        <input type="text" id="tu" placeholder="Nhập từ bạn cần tìm ( dog, cat, bird)">
+        <button type="button" onclick="dich()">Tra từ</button>
+        <p id="nghia">Nghĩa: </p>
+    </form>
+    <script>
+        function dich(){
+            let a=document.getElementById("tu").value;
+            let d=[];
+            d.push(a);
+            d.toString();
+            let b=["dog","cat","bird","Dog","Cat","Bird"];
+            let c=["chó","mèo","chim"];
+            for (i=0;i<b.length;i++){
+                if (a===b[i] || a===b[i+3]) document.getElementById("nghia").innerHTML= "Nghĩa: "+ c[i];
+            }
+        }
+    </script>
+</body>
+</html>
