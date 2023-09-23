@@ -5,30 +5,30 @@
     <title>Xóa phần tử nếu có trong mảng</title>
 </head>
 <body>
-    <script>
-        let a= new Array(10);
-        let d;
-        for (i=0;i<10;i++){
-            let b= +prompt("Nhập giá trị phần tử của mảng: ");
-            a[i]=b;
-        }
-        let c= +prompt("Nhập số cần kiểm tra có trong mảng không: ");
-        for (i=0;i<10;i++){
-            if (a[i]===c){
-                for (j=i;j<10;j++){
-                    d=a[j];
-                    a[j]=a[j+1];
-                    a[j+1]=d;
-                }
-                a[9]=0;
-                i--;
+<script>
+    let mang = new Array(10);
+    let hoanDoi;
+    for (index = 0; index < 10; index++) {
+        let giaTri = +prompt("Nhập giá trị phần tử của mảng: ");
+        mang[index] = giaTri;
+    }
+    let soKiemTra = +prompt("Nhập số cần kiểm tra có trong mảng không: ");
+    for (index = 0; index < 10; index++) {
+        if (mang[index] === soKiemTra) {
+            for (dem = index; dem < 10; dem++) {
+                hoanDoi = mang[dem];
+                mang[dem] = mang[dem + 1];
+                mang[dem + 1] = hoanDoi;
             }
+            mang[9] = 0;
+            index--;
         }
-        console.log(a);
-        for (i=0;i<10;i++){
-            if (i<9) document.write(a[i]+", ");
-            else document.write(a[i]+".")
-        }
-    </script>
+    }
+    console.log(mang);
+    for (index = 0; index < 10; index++) {
+        if (index < 9) document.write(mang[index] + ", ");
+        else document.write(mang[index] + ".")
+    }
+</script>
 </body>
 </html>

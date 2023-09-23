@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Ngôi sao và chòm sao</title>
+</head>
+<body>
+<script>
+    let ngoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function ngoiSaoVaChomSao(dauvao) {
+        for (index = 0; index < ngoiSao.length; index++) {
+            if (dauvao === ngoiSao[index]) {
+                document.write(ngoiSao[index] + " có chòm sao " + chomSao[index]);
+                break;
+            } else if (index === ngoiSao.length - 1) {
+                if (dauvao !== ngoiSao[ngoiSao.length - 1]) document.write("Không có dữ liệu");
+            }
+        }
+    }
+
+    let dauVao = prompt("Nhập ngôi sao (viết in chữ cái đầu): ");
+    ngoiSaoVaChomSao(dauVao);
+</script>
+</body>
+</html>

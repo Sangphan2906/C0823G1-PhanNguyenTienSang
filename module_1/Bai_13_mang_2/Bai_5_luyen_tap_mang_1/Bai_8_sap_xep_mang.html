@@ -6,15 +6,15 @@
 </head>
 <body>
 <script>
-    let a= new Array(10);
-    for (i=0;i<10;i++){
-        let b= +prompt("Nhập số của mảng: ");
-        a[i]=b;
+    let mang = new Array(10);
+    for (index = 0; index < 10; index++) {
+        let giaTri = +prompt("Nhập số của mảng: ");
+        mang[index] = giaTri;
     }
-    a.sort((a,b)=> b-a);
-    for (i=0;i<10;i++){
-        if (i<9) document.write(a[i]+", ");
-        else document.write(a[i])
+    mang.sort((a, b) => b - a);
+    for (index = 0; index < 10; index++) {
+        if (index < 9) document.write(mang[index] + ", ");
+        else document.write(mang[index])
     }
 </script>
 </body>

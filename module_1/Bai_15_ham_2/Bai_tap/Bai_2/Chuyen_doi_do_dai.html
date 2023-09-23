@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi độ dài</title>
+</head>
+<body>
+<script>
+    function m_f(met) {
+        let feet = met * 3.279;
+        alert("Số feet tương đương là:" + feet);
+    }
+
+    function f_m(feet) {
+        let met = feet * 0.305;
+        alert("Số met tương đương là: " + met);
+    }
+
+    let a = prompt("Nhập đơn vị bạn muốn chuyển đổi (met hay feet): ");
+    let b = prompt("Nhập đơn vị bạn muốn chuyển đổi sang (met hay feet): ");
+    if ((a === "met" || a === "Met" || a === "m" || a === "M") && (b === "feet" || b === "Feet" || b === "f" || b === "F")) {
+        let m = +prompt("Nhập số met: ");
+        m_f(m);
+    } else if ((a === "feet" || a === "Feet" || a === "f" || a === "F") && (b === "met" || b === "Met" || b === "m" || b === "M")) {
+        let f = +prompt("Nhập số feet: ");
+        f_m(f);
+    }
+</script>
+</body>
+</html>

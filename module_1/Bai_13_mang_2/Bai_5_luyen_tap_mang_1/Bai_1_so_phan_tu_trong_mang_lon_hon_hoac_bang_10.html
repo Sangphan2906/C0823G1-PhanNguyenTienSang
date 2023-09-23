@@ -5,23 +5,23 @@
     <title>Số phần tử trong mảng lớn hơn hoặc bằng 10</title>
 </head>
 <body>
-    <script>
-        let a= new Array(10);
-        s="Mảng của bạn là: "
-        for (i=0;i<10;i++){
-            let c= +prompt("Nhập phần tử của mảng ( số): ");
-            a[i]=c;
-        }
-        for (i=0;i<a.length;i++){
-            if (i===a.length-1) s+=a[i]+"."+"<br>";
-            else s+=a[i]+", ";
-        }
-        document.write(s);
-        count=0;
-        for (i=0;i<a.length;i++){
-            if (a[i]>=10) count++
-        }
-        document.write("Trong mảng bạn nhập có "+count+" số nguyên lớn hơn hoặc bằng 10");
-    </script>
+<script>
+    let mang = new Array(10);
+    ketQua = "Mảng của bạn là: "
+    for (index = 0; index < 10; index++) {
+        giaTri = +prompt("Nhập phần tử của mảng ( số): ");
+        mang[index] = giaTri;
+    }
+    for (index = 0; index < mang.length; index++) {
+        if (index === mang.length - 1) ketQua += mang[index] + "." + "<br>";
+        else ketQua += mang[index] + ", ";
+    }
+    document.write(ketQua);
+    count = 0;
+    for (index = 0; index < mang.length; index++) {
+        if (mang[index] >= 10) count++
+    }
+    document.write("Trong mảng bạn nhập có " + count + " số nguyên lớn hơn hoặc bằng 10");
+</script>
 </body>
 </html>

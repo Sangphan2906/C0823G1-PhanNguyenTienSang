@@ -6,32 +6,31 @@
 </head>
 <body>
 <script>
-    let a= new Array(10);
-    let b= new Array(10);
-    c=new Array(2);
-    d=[];
-    for (i=0;i<10;i++){
-        let d= +prompt("Nhập giá trị phần tử cho mảng a: ");
-        a[i]=d;
+    let mang1 = new Array(10);
+    let mang2 = new Array(10);
+    let mangTong = new Array(2);
+    for (index1 = 0; index1 < 10; index1++) {
+        let giaTri1 = +prompt("Nhập giá trị phần tử cho mảng a: ");
+        mang1[index1] = giaTri1;
     }
-    for (j=0;j<10;j++){
-        let e= +prompt("Nhập giá trị phần tử cho mảng b: ");
-        b[j]=e;
+    for (index2 = 0; index2 < 10; index2++) {
+        let giaTri2 = +prompt("Nhập giá trị phần tử cho mảng b: ");
+        mang2[index2] = giaTri2;
     }
-    for (i=0;i<=1;i++){
-        c[i]=new Array(10);
-        if (i===0) {
-            for (j=0,k=0;j<10,k<10;j++,k++){
-                c[i][j]=a[k];
+    for (index = 0; index <= 1; index++) {
+        mangTong[index] = new Array(10);
+        if (index === 0) {
+            for (dem1 = 0, dem2 = 0; dem1 < 10, dem2 < 10; dem1++, dem2++) {
+                mangTong[index][dem1] = mang1[dem2];
             }
         }
-        if (i===1){
-            for (j=0,k=0;j<10,k<10;j++,k++){
-                c[i][j]=b[k];
+        if (index === 1) {
+            for (dem1 = 0, dem2 = 0; dem1 < 10, dem2 < 10; dem1++, dem2++) {
+                mangTong[index][dem1] = mang2[dem2];
             }
         }
     }
-    document.write(c);
+    document.write(mangTong);
 </script>
 </body>
 </html>

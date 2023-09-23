@@ -5,20 +5,19 @@
     <title>Kiểm tra sự giống nhau của hai chuỗi</title>
 </head>
 <body>
-  <script>
-    let a= prompt("Nhập chuỗi 1: ");
-    let b= prompt("Nhập chuỗi 2: ");
-    let c=a.split("");
-    let d=b.split("");
-    count=0;
-    if (c.length===d.length){
-      for (i=0, j=0; i<c.length,j<d.length;i++,j++){
-        if (c[i]===d[j]) count+=1;
-      }
-      if (count===c.length) document.write("Hai chuỗi giống nhau");
-      else document.write("Hai chuỗi khác nhau");
-    }
-    else document.write("Hai chuỗi khác nhau");
-  </script>
+<script>
+    let chuoi1 = prompt("Nhập chuỗi 1: ");
+    let chuoi2 = prompt("Nhập chuỗi 2: ");
+    let mang1 = chuoi1.split("");
+    let mang2 = chuoi2.split("");
+    count = 0;
+    if (mang1.length === mang2.length) {
+        for (index1= 0, index2 = 0; index1 < mang1.length, index2 < mang2.length; index1++, index2++) {
+            if (mang1[index1] === mang2[index2]) count += 1;
+        }
+        if (count === mang1.length) document.write("Hai chuỗi giống nhau");
+        else document.write("Hai chuỗi khác nhau");
+    } else document.write("Hai chuỗi khác nhau");
+</script>
 </body>
 </html>

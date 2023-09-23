@@ -6,14 +6,14 @@
 </head>
 <body>
 <script>
-    let a= prompt("Nhập chuỗi: ");
-    let b= a.split("");
-    console.log(b);
-    count=0;
-    for (i=0;i<b.length;i++){
-        if (!isNaN(b[i]) && b[i]!==" ") count+=1;
+    let chuoi = prompt("Nhập chuỗi: ");
+    let mang = chuoi.split("");
+    console.log(mang);
+    count = 0;
+    for (index = 0; index < mang.length; index++) {
+        if (!isNaN(mang[index]) && mang[index] !== " ") count += 1;
     }
-    document.write("Mảng có "+count+" ký tự số");
+    document.write("Mảng có " + count + " ký tự số");
 </script>
 </body>
 </html>

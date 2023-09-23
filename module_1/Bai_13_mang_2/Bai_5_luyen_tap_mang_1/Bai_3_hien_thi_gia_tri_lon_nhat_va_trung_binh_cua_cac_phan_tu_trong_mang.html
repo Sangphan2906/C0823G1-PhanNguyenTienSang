@@ -5,24 +5,24 @@
     <title></title>
 </head>
 <body>
-    <script>
-        a=[];
-        let b= +prompt("Nhập số lượng phần tử trong mảng bạn muốn tạo: ");
-        for (i=0;i<b;i++){
-            let c= +prompt("Nhập phần tử trong mảng (số): ");
-            a.push(c);
-        }
-        let max=a[0];
-        for (i=0;i<a.length;i++){
-            if (a[i]>max) max=a[i];
-        }
-        document.write("Giá trị lớn nhất của mảng là: "+max+"<br>");
-        let tb=0;
-        for (i=0;i<a.length;i++){
-            if (i<a.length-1) tb+=a[i];
-            else tb=(tb+a[i])/a.length;
-        }
-        document.write("Giá trị trung bình của các phần tử trong mảng: "+tb);
-    </script>
+<script>
+    mang = [];
+    let soLuong = +prompt("Nhập số lượng phần tử trong mảng bạn muốn tạo: ");
+    for (index = 0; index < soLuong; index++) {
+        let giaTri = +prompt("Nhập phần tử trong mảng (số): ");
+        mang.push(giaTri);
+    }
+    let max = mang[0];
+    for (index = 0; index < mang.length; index++) {
+        if (mang[index] > max) max = mang[index];
+    }
+    document.write("Giá trị lớn nhất của mảng là: " + max + "<br>");
+    let trungBinh = 0;
+    for (index = 0; index < mang.length; index++) {
+        if (index < mang.length - 1) trungBinh += mang[index];
+        else trungBinh = (trungBinh + mang[index]) /mang.length;
+    }
+    document.write("Giá trị trung bình của các phần tử trong mảng: " + trungBinh);
+</script>
 </body>
 </html>

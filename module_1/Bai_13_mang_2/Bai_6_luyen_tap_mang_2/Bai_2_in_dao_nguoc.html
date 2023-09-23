@@ -6,24 +6,24 @@
 </head>
 <body>
 <script>
-    let a=[];
-    let d;
-    let s="Mảng sau khi đảo ngược là: "
-    let b= +prompt("Nhập số lượng phần tử của mảng bạn muốn tạo: ");
-    for (i=0;i<b;i++){
-        let c= prompt("nhập giá trị phần tử của mảng");
-        a.push(c);
+    let mang = [];
+    let hoanDoi;
+    let ketQua = "Mảng sau khi đảo ngược là: "
+    let soLuong = +prompt("Nhập số lượng phần tử của mảng bạn muốn tạo: ");
+    for (index = 0; index < soLuong; index++) {
+        let giaTri = prompt("nhập giá trị phần tử của mảng");
+        mang.push(giaTri);
     }
-    document.write("Mảng ban đầu là: "+a+"<br>");
-    for (i=0;i<(a.length-1)/2;i++){
-        c=a[i];
-        a[i]=a[a.length-1-i];
-        a[a.length-1-i]=c;
+    document.write("Mảng ban đầu là: " + mang + "<br>");
+    for (index = 0; index < (mang.length - 1) / 2; index++) {
+        hoanDoi = mang[index];
+        mang[index] = mang[mang.length - 1 - index];
+        mang[mang.length - 1 - index] = hoanDoi;
     }
-    for (i=0;i<a.length;i++){
-        s+=a[i]
+    for (index = 0; index < mang.length; index++) {
+        ketQua += mang[index]
     }
-    document.write(s);
+    document.write(ketQua);
 </script>
 </body>
 </html>

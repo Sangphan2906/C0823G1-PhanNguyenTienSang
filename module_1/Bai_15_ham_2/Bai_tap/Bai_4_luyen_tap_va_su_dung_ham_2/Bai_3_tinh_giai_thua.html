@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa</title>
+</head>
+<body>
+<script>
+    function tinhGiaiThua(n) {
+        let s = 1;
+        for (i = 1; i <= n; i++) {
+            s *= i;
+        }
+        return s;
+    }
+
+    let so = +prompt("Nhập số cần tính giai thừa: ");
+    document.write("Giai thừa của " + so + " là: " + tinhGiaiThua(so));
+</script>
+</body>
+</html>

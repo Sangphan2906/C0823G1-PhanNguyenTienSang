@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giá trị nhỏ nhất trong 3 số</title>
+</head>
+<body>
+<script>
+    function min(a, b, c) {
+        min = a;
+        if (b < a) min = b;
+        else if (c < a) min = c;
+        return min;
+    }
+
+    let so1 = +prompt("Nhập số thứ nhất: ");
+    let so2 = +prompt("Nhập số thứ hai: ");
+    let so3 = +prompt("Nhập số thứ 3: ");
+    document.write("Giá trị nhỏ nhất trong 3 số vừa nhập là: " + min(so1, so2, so3));
+</script>
+</body>
+</html>

@@ -6,19 +6,20 @@
 </head>
 <body>
 <script>
-    a=[];
-    let d;
-    let b= +prompt("Nhập số lượng phần tử trong mảng bạn muốn tạo: ");
-    for (i=0;i<b;i++){
-        let c= +prompt("Nhập giá trị của phần tử trong mảng: ");
-        a[i]=c;
+    mang = [];
+    let hoanDoi;
+    let soLuong = +prompt("Nhập số lượng phần tử trong mảng bạn muốn tạo: ");
+    for (index = 0; index < soLuong; index++) {
+        let giaTri = +prompt("Nhập giá trị của phần tử trong mảng: ");
+        mang[index] = giaTri;
     }
-    for (i=0;i<=(a.length-1)/2;i++){
-        d=a[i];
-        a[i]=a[a.length-1-i];
-        a[a.length-1-i]=d;
+    document.write("Mảng của bạn là: "+mang+"<br>");
+    for (index = 0; index <= (mang.length - 1) / 2; index++) {
+        hoanDoi = mang[index];
+        mang[index] = mang[mang.length - 1 - index];
+        mang[mang.length - 1 - index] = hoanDoi;
     }
-    console.log(a);
+    document.write("Mảng sau khi đảo ngược: "+mang);
 </script>
 </body>
 </html>

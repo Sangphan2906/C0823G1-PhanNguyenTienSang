@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng</title>
+</head>
+<body>
+<script>
+    function daoNguoc(mang){
+        let hoanDoi;
+        document.write("Mảng ban đầu là: " + mang + "<br>");
+        for (i=0;i<(mang.length-1)/2;i++){
+            hoanDoi=mang[i];
+            mang[i]=mang[mang.length-1-i];
+            mang[mang.length-1-i]=hoanDoi;
+        }
+        document.write("Mảng sau khi đảo ngược vị trí các phần tử: "+mang);
+    }
+    let soLuong= +prompt("Nhập số lượng phần tử của mảng:");
+    let mang=new Array(soLuong);
+    for (i=0;i<soLuong;i++){
+        let giaTri= prompt("Nhập giá trị phần tử của mảng:");
+        mang[i]=giaTri;
+    }
+    daoNguoc(mang);
+</script>
+</body>
+</html>

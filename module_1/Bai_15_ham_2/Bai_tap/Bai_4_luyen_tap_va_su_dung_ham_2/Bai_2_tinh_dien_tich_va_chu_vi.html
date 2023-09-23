@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích và chu vi</title>
+</head>
+<body>
+<script>
+    function chuVi(r) {
+        return 2 * 3.14 * r;
+    }
+
+    function dienTich(r) {
+        return 3.14 * r * r;
+    }
+
+    let r = +prompt("Nhập bán kính của hình tròn: ");
+    document.write("Chu vi hình tròn là: " + chuVi(r) + "<br>");
+    document.write("Diện tích hình tròn là: " + dienTich(r));
+</script>
+</body>
+</html>

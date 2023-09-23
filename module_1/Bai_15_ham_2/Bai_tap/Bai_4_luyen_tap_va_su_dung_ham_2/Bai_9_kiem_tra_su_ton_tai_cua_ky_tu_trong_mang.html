@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra sự tồn tại của ký tự trong mảng</title>
+</head>
+<body>
+<script>
+    function kiemTra(mamg, kytu) {
+        for (i = 0; i < mang.length; i++) {
+            if (kytu === mang[i]) {
+                document.write(kytu + " có tồn tại trong mảng");
+                break;
+            } else if (i === mang.length - 1) if (kytu !== mang[mang.length - 1]) document.write(kytu + " không tồn tại trong mảng");
+        }
+    }
+
+    let soLuong = +prompt("Nhập số lượng phần tử của mảng bạn muốn tạo:");
+    let mang = new Array(soLuong);
+    for (i = 0; i < soLuong; i++) {
+        let giaTri = prompt("Nhập giá trị phần tử của mảng:");
+        mang[i] = giaTri;
+    }
+    let kyTu = prompt("Nhập ký tự");
+    kiemTra(mang, kyTu);
+</script>
+</body>
+</html>

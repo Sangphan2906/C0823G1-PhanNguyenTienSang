@@ -6,17 +6,17 @@
 </head>
 <body>
 <script>
-    let a=[];
-    let b= +prompt("Số lượng phần tử trong mảng bạn muốn tạo: ");
-    let count=0;
-    for (i=0;i<b;i++){
-        let c= prompt("Nhập ký tự trong mảng: ");
-        a.push(c);
+    let mang = [];
+    let soLuong = +prompt("Số lượng phần tử trong mảng bạn muốn tạo: ");
+    let count = 0;
+    for (index = 0; index < soLuong; index++) {
+        let giaTri = prompt("Nhập ký tự trong mảng: ");
+        mang.push(giaTri);
     }
-    for (i=0;i<a.length;i++){
-        if (!isNaN(a[i])) count+=1;
+    for (index = 0; index < mang.length; index++) {
+        if (!isNaN(mang[index])) count += 1;
     }
-    document.write("Mảng có "+count+" ký tự số");
+    document.write("Mảng có " + count + " ký tự số");
 </script>
 </body>
 </html>

@@ -6,19 +6,18 @@
 </head>
 <body>
 <script>
-    let a = new Array(10);
-    for (i = 0; i < 10; i++) {
-        let c = +prompt("Nhập số nguyên: ");
-        a[i] = c;
+    let mang = new Array(10);
+    for (index = 0; index < 10; index++) {
+        let giaTri = +prompt("Nhập số nguyên: ");
+        mang[index] = giaTri;
     }
-    let d = +prompt("Nhập số nguyên bạn muốn kiểm tra có trong mảng không: ");
-    for (i = 0; i < 10; i++) {
-        if (a[i] === d)  {
-            document.write(d + " is in the array");
+    let soKiemTra = +prompt("Nhập số nguyên bạn muốn kiểm tra có trong mảng không: ");
+    for (index = 0; index < 10; index++) {
+        if (mang[index] === soKiemTra) {
+            document.write(soKiemTra + " is in the array");
             break;
-        }
-        else if (i===9) document.write(d+" is not in the array");
-        }
+        } else if (index === 9) document.write(soKiemTra + " is not in the array");
+    }
 </script>
 </body>
 </html>

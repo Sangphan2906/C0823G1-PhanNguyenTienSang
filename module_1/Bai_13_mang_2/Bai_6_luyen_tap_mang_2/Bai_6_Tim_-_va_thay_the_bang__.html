@@ -6,13 +6,13 @@
 </head>
 <body>
 <script>
-    let a= prompt("Nhâp chuỗi: ");
-    let b=a.split("");
-    for (i=0;i<b.length;i++){
-        if (b[i]==="-") b[i]="_";
+    let chuoi = prompt("Nhâp chuỗi: ");
+    let mang = chuoi.split("");
+    for (index = 0; index < mang.length; index++) {
+        if (mang[index] === "-") mang[index] = "_";
     }
-    for (i=0;i<b.length;i++){
-        document.write(b[i]);
+    for (index = 0; index < mang.length; index++) {
+        document.write(mang[index]);
     }
 </script>
 </body>

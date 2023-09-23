@@ -5,21 +5,21 @@
     <title></title>
 </head>
 <body>
-    <script>
-        let a = new Array(10);
-        for (i = 0; i < 10; i++) {
-            let c = +prompt("Nhập số nguyên: ");
-            a[i] = c;
+<script>
+    let mang = new Array(10);
+    for (index = 0; index < 10; index++) {
+        let giaTri = +prompt("Nhập số nguyên: ");
+        mang[index] = giaTri;
+    }
+    console.log(mang)
+    let soKiemTra = +prompt("Nhập số nguyên bạn muốn kiểm tra có trong mảng không: ");
+    for (index = 0; index < 10; index++) {
+        if (mang[index] === soKiemTra) {
+            mang.splice(index, 1);
+            index--;
         }
-        console.log(a)
-        let d = +prompt("Nhập số nguyên bạn muốn kiểm tra có trong mảng không: ");
-        for (i = 0; i < 10; i++) {
-            if (a[i] === d ) {
-                a.splice(i, 1);
-                i--;
-            }
-        }
-        document.write(a);
-    </script>
+    }
+    document.write(mang);
+</script>
 </body>
 </html>

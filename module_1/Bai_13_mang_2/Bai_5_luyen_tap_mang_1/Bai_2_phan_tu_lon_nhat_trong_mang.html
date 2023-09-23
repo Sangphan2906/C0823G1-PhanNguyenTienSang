@@ -5,21 +5,21 @@
     <title>Phần tử lớn nhất trong mảng</title>
 </head>
 <body>
-    <script>
-        let a= new Array(10);
-        let index;
-        for (i=0;i<10;i++){
-            let c= +prompt("Nhập giá trị phần tử trong mảng (các phần tử khác nhau): ");
-            a[i]=c;
-        }
-        max=a[0];
-        for ( let i=0;i<a.length;i++){
-            if (a[i]>max) max=a[i];
-        }
-        for (i=0;i<a.length;i++){
-            if (max===a[i]) index=i;
-        }
-        document.write("Giá trị lớn nhất của mảng là: "+max+" và nằm ở vị trí "+index+" trong mảng");
+<script>
+    let mang = new Array(10);
+    let chiSo;
+    for (index = 0; index < 10; index++) {
+        let giaTri = +prompt("Nhập giá trị phần tử trong mảng (các phần tử khác nhau): ");
+        mang[index] = giaTri;
+    }
+    max = mang[0];
+    for  (let index = 0; index < mang.length; index++) {
+        if (mang[index] > max) max = mang[index];
+    }
+    for (index = 0; index < mang.length; index++) {
+        if (max === mang[index]) chiSo = index;
+    }
+    document.write("Giá trị lớn nhất của mảng là: " + max + " và nằm ở vị trí " + chiSo + " trong mảng");
 </script>
 </body>
 </html>

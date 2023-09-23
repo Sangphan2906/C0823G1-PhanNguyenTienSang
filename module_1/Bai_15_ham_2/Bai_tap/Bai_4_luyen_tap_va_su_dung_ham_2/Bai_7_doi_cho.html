@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chỗ</title>
+</head>
+<body>
+<script>
+    function doiCho(a, b) {
+        let c;
+        document.write("Giá trị của số đầu tiên: " + a + " và giá trị của số thứ hai là: " + b + "<br>")
+        c = a;
+        a = b;
+        b = c;
+        document.write("Sau khi hoán đổi thì giá trị của số đầu tiên là " + a + " và giá trị của số thứ hai là: " + b);
+    }
+
+    let so1 = +prompt("Nhập số thứ nhất:");
+    let so2 = +prompt("Nhập số thứ hai:");
+    doiCho(so1, so2);
+</script>
+</body>
+</html>

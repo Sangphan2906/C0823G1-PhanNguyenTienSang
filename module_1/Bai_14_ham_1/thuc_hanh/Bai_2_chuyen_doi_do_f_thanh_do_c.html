@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi độ F thành độ C</title>
+</head>
+<body>
+<h2>Tempature COnverter</h2>
+<p>Type a value in the Fahrenheit field to convert the value to Celcius</p>
+<label>Fahrenheit <input typeof="number" id="doF" oninput="chuyen()"></label>
+<p id="doC">Celcius: </p>
+<script>
+    function chuyen() {
+        let C = (document.getElementById("doF").value - 32) / 1.8;
+        document.getElementById("doC").innerHTML = "Celcius:" + C;
+    }
+</script>
+</body>
+</html>
