@@ -5,28 +5,34 @@
     <title>Tạo bàn cờ caro đơn giản</title>
 </head>
 <body>
-    <script>
-        let e=[];
-        let f=[];
-        let g;
-        function hienThi(){
-
-        }
-        let a= +prompt("Nhập số hàng của bàn cờ caro: ");
-        let b= +prompt("Nhập số cột của bàn cờ caro: ");
-        let c= new Array(a);
-        for (i=0;i<a;i++){
-            c[i]=[];
-            for(j=0;j<b;j++){
-                if (i===e && j===f) document.write(g);
+<script>
+    function hienThi() {
+        let dong = +prompt("Nhập vị trí dòng có phần tử thay đổi:");
+        let cot = +prompt("Nhập số cột có phần tử thay đổi");
+        let thayDoi = prompt("Nhập giá tị thay đổi: ");
+        for (i = 0; i < c.length; i++) {
+            for (j = 0; j < c[i].length; j++) {
+                if (i === dong && j === cot) document.write(thayDoi);
                 else {
-                    c[i][j]=0;
-                    document.write(c[i][j]);
+                    if (j === c[i].length - 1) document.write("0"+"<br>");
+                    else document.write("0");
                 }
             }
-            document.write("<br>");
         }
+    }
+
+    let a = +prompt("Nhập số hàng của bàn cờ caro: ");
+    let b = +prompt("Nhập số cột của bàn cờ caro: ");
+    let c = new Array(a);
+    for (i = 0; i < a; i++) {
+        c[i] = [];
+        for (j = 0; j < b; j++) {
+            c[i][j] = 0;
+            document.write(c[i][j]);
+        }
+        document.write("<br>");
+    }
     document.write("<button type=\"button\" onclick=\"hienThi()\">Change Value</button>")
-    </script>
+</script>
 </body>
 </html>

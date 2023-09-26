@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp hình tròn</title>
+</head>
+<body>
+<script>
+    function HinhTron(r,a){
+        this.radius= r;
+        this.area= a;
+
+        this.getRadius= function (){
+            return this.radius;
+        }
+        this.getArea= function (){
+            return this.area;
+        }
+    }
+    let hienThi= new HinhTron(2,12.56);
+    document.write(hienThi.radius+"<br>");
+    document.write(hienThi.area+"<br>");
+    document.write(hienThi.getRadius()+"<br>");
+    document.write(hienThi.getArea());
+</script>
+</body>
+</html>

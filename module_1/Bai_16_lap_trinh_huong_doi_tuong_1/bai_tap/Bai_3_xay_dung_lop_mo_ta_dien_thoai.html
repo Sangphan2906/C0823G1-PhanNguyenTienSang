@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+<script>
+    class DienThoai {
+        constructor(pin, battat) {
+            this.trangthaipin = pin;
+            this.battat = battat;
+            this.dangsoan = [];
+            this.hopthuden = [];
+            this.thudagui = [];
+        }
+
+        soantin() {
+            let soan = prompt("Nhập tin nhắn: ");
+            let trangthai = confirm("Bạn có muốn gửi không?");
+            if (trangthai === true) this.thudagui.push(soan);
+            else if (trangthai === false) this.dangsoan.push(soan)
+        }
+
+        kiemTraTrangThai() {
+            if (this.battat === "bật") document.write("Điện thoại đang bật" + "<br>");
+            else if (this.battat === "tắt") document.write("Điện thoại đang tắt" + "<br>");
+        }
+
+        bathoactat() {
+            this.battat = prompt("Nhập trạng thái bạn muốn chuyển sang(tắt hay bật):");
+            document.write("Điện thoại đang ở trạng thái:" + this.battat + "<br>");
+        }
+
+        sacpin() {
+            for (; this.trangthaipin < 100;) {
+                this.trangthaipin += 1;
+                document.write("Trạng thái pin hiện tại là: " + this.trangthaipin + "<br>");
+            }
+        }
+
+        guitin(mobile) {
+            let soan = prompt("Nhập tin nhắn:");
+            let xacnhan = confirm("Bạn có muốn gửi tin nhắn không?");
+            if (xacnhan === true) {
+                this.thudagui.push(soan);
+                mobile.hopthuden.push(soan);
+            }
+        }
+
+        nhantin() {
+            let xacnhan = confirm("Bạn có muốn nhận tin nhắn không?")
+            if (xacnhan === true) {
+                document.write("Thư đã nhận: " + this.hopthuden[this.hopthuden.length - 1] + "<br>");
+            }
+        }
+
+        xemhopthuden() {
+            document.write("Hộp thư đến của bạn là: " + this.hopthuden + "<br>");
+        }
+
+        xemtindagui() {
+            document.write("Tin nhắn đã gửi của bạn là: " + this.thudagui + "<br>");
+        }
+    }
+
+    let dienThoai1 = new DienThoai(80, "bật");
+    let dienThoai2 = new DienThoai(20, "bật")
+    if (dienThoai1.trangthaipin > 0 && dienThoai1.battat === "bật") {
+        document.write("Trạng thái pin hiện tại: " + dienThoai1.trangthaipin + "<br>");
+        dienThoai1.soantin();
+        dienThoai1.trangthaipin -= 1;
+        dienThoai1.soantin();
+        dienThoai1.trangthaipin -= 1;
+        document.write("Thư đang soạn: " + dienThoai1.dangsoan + "<br>");
+        document.write("Trạng thái pin hiện tại: " + dienThoai1.trangthaipin + "<br>");
+    }
+    if (dienThoai1.trangthaipin > 0 && dienThoai1.battat === "bật") {
+        document.write("Thư đã gửi: " + dienThoai1.thudagui + "<br>");
+        dienThoai1.trangthaipin -= 1;
+        document.write("Trạng thái pin hiện tại: " + dienThoai1.trangthaipin + "<br>");
+    }
+    if (dienThoai1.trangthaipin > 0 && dienThoai1.battat === "bật") {
+        dienThoai1.kiemTraTrangThai();
+        dienThoai1.trangthaipin -= 1;
+        document.write("Trạng thái pin hiện tại: " + dienThoai1.trangthaipin + "<br>");
+    }
+    if (dienThoai1.trangthaipin > 0 && dienThoai1.battat === "bật") {
+        dienThoai1.sacpin();
+    }
+    if (dienThoai2.trangthaipin > 0 && dienThoai2.battat === "bật") {
+        dienThoai2.guitin(dienThoai1);
+        dienThoai2.trangthaipin -= 1;
+        document.write("Trạng thái pin hiện tại: " + dienThoai2.trangthaipin + "<br>");
+    }
+    if (dienThoai1.trangthaipin > 0 && dienThoai1.battat === "bật") {
+        dienThoai1.nhantin();
+        dienThoai1.trangthaipin -= 1;
+        document.write("Trạng thái pin hiện tại: " + dienThoai1.trangthaipin + "<br>");
+    }
+    if (dienThoai1.trangthaipin > 0) {
+        dienThoai1.xemhopthuden();
+        dienThoai1.trangthaipin -= 1;
+        document.write("Trạng thái pin hiện tại: " + dienThoai1.trangthaipin + "<br>");
+    }
+    if (dienThoai1.trangthaipin > 0) {
+        dienThoai1.xemtindagui();
+        dienThoai1.trangthaipin -= 1;
+        document.write("Trạng thái pin hiện tại: " + dienThoai1.trangthaipin + "<br>");
+    }
+        if (dienThoai2.trangthaipin > 0 && dienThoai2.battat==="bật") {
+            dienThoai2.bathoactat();
+            dienThoai2.trangthaipin -= 1;
+            document.write("Trạng thái pin hiện tại: " + dienThoai2.trangthaipin + "<br>");
+        }
+</script>
+</body>
+</html>

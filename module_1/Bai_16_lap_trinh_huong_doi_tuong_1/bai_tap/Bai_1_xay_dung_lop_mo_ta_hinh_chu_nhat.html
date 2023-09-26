@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="hcn" width="200" height="100" style="border: 1px"></canvas>
+<script>
+    class Rectangle{
+        constructor(chieuDai,chieuRong){
+            this.chieudai= chieuDai;
+            this.chieurong= chieuRong;
+        }
+        chuVi(){
+            return 2*(this.chieurong+this.chieudai);
+        }
+        dienTich(){
+            return this.chieudai*this.chieurong;
+        }
+        ve(){
+            let draw= document.getElementById("hcn").getContext("2d");
+            draw.fillRect(50,50,this.chieudai,this.chieurong);
+        }
+    }
+    let rectangle= new Rectangle(5,3);
+    document.write("Chiều dài ban đầu :"+rectangle.chieudai+" và chiều rộng ban đầu: "+rectangle.chieurong+"<br>");
+    rectangle.chieudai= +prompt("Nhập chiều dài của hình chữ nhật:");
+    rectangle.chieurong= +prompt("Nhập chiều rộng của hình chữ nhật");
+    document.write("Chiều dài sau khi thay đổi là: "+rectangle.chieudai+" và chiều rộng sau khi thay đổi là: "+rectangle.chieurong+"<br>");
+    document.write("Chu vi của hình chữ nhật là: "+rectangle.chuVi()+"<br>");
+    document.write("Diện tích của hình chữ nhật là: "+rectangle.dienTich());
+    rectangle.ve();
+</script>
+</body>
+</html>

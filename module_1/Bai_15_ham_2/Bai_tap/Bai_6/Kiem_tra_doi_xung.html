@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra đối xứng</title>
+</head>
+<body>
+<script>
+    let chuoi= prompt("Nhập chuỗi bạn cần kiểm tra: ");
+    let mang= chuoi.split("");
+    document.write("Chuỗi của bạn là: "+chuoi+"<br>");
+    function kiemTraDoiXung(data){
+        let count=0;
+        for (i=0;i<(data.length-1)/2;i++){
+            if (data[i]===data[data.length-1-i]) count++;
+        }
+        if (count=== data.length/2 || count === (data.length-1)/2) document.write(chuoi+" là chuỗi đối xứng!");
+        else if (count<(data.length-1)/2) document.write(chuoi+" không phải là chuỗi đối xứng!");
+    }
+    kiemTraDoiXung(mang);
+</script>
+</body>
+</html>

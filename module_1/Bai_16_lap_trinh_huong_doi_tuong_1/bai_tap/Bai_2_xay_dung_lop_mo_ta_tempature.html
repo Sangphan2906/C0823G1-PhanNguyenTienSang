@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Tempature</title>
+</head>
+<body>
+<script>
+    class Tempature{
+        constructor(doC) {
+            this.doC= doC;
+        }
+        c_f(doC){
+            return this.doC * 33.8;
+        }
+        c_k(){
+            return this.doC + 273.15;
+        }
+    }
+    let tempature = new Tempature(25);
+    document.write("Độ F là: "+tempature.c_f()+" F"+"<br>");
+    document.write("Độ K là: "+tempature.c_k()+" K");
+</script>
+</body>
+</html>

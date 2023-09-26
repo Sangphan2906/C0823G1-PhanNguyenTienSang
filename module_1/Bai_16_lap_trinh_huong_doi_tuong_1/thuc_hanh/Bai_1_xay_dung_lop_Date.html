@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp Date</title>
+</head>
+<body>
+<script>
+    function Date(day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.getday = function () {
+            return this.day;
+        };
+        this.getMonth = function () {
+            return this.month;
+        };
+        this.getYear = function () {
+            return this.year;
+        };
+        this.setDay = function () {
+            this.day = prompt("Nhập ngày:");
+        };
+        this.setMonth = function () {
+            this.month = prompt("Nhập tháng:");
+        };
+        this.setYear = function () {
+            this.year = prompt("Nhập năm:");
+        };
+        this.setDate = function () {
+            this.day = prompt("Nhập ngày");
+            this.month = prompt("Nhập tháng");
+            this.year = prompt("Nhập năm:");
+        };
+        this.tostring = function () {
+            return this.day + "/" +this.month + '/' + this.year;
+        };
+    }
+
+    let hienthi = new Date(11,2,2023);
+    document.write(hienthi.day);
+    document.write(hienthi.month);
+    document.write(hienthi.year);
+    document.write(hienthi.getday());
+    document.write(hienthi.getMonth());
+    document.write(hienthi.getYear());
+    document.write(hienthi.tostring());
+</script>
+</body>
+</html>

@@ -8,11 +8,11 @@
 <script>
     function kiTuSo(value) {
         if (!isNaN(value) && value !== " " && value !== "") return true;
-        else if (isNaN(value) || value === " " || value === "") return false;
+        else return false;
     }
 
     let value = prompt("Nhập ký tự cần kiểm tra có phải ký tự số hay không:");
-    document.write(kiTuSo(value));
+    document.write("Kết quá kiểm tra ký tự của bạn là ký tự số là: "+ kiTuSo(value));
 </script>
 </body>
 </html>
