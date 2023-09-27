@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đơn giản- di chuyển đối tượng</title>
+</head>
+<body onload="batSuKien()">
+<img src="ảnh%20son%20goku.jpg" alt="Son goku" id="songoku">
+<script>
+    let anh = document.getElementById("songoku");
+    anh.style.position = "relative";
+    anh.style.left = "50px";
+    anh.style.top = "30px";
+
+    class DiChuyen {
+        constructor() {
+        };
+
+        trai() {
+            let anh= document.getElementById("songoku");
+            anh.style.left = parseInt(anh.style.left) - 20 + "px";
+        };
+
+        phai() {
+            let anh= document.getElementById("songoku");
+            anh.style.left = parseInt(anh.style.left) + 20 + "px";
+        };
+
+        len() {
+            let anh= document.getElementById("songoku");
+            anh.style.top = parseInt(anh.style.top) - 10 + "px";
+        };
+
+        xuong() {
+            let anh= document.getElementById("songoku");
+            anh.style.top = parseInt(anh.style.top) + 10 + "px";
+        };
+    }
+
+    let diChuyen = new DiChuyen();
+    move(evt);
+
+    function move(evt) {
+            switch (evt.keyCode) {
+                case 37:
+                    diChuyen.trai();
+                    break;
+                case 38:
+                    diChuyen.len();
+                    break;
+                case 39:
+                    diChuyen.phai();
+                    break;
+                case 40:
+                    diChuyen.xuong();
+                    break;
+            }
+    }
+    function batSuKien(){
+        window.addEventListener("keydown",move);
+    }
+</script>
+</body>
+</html>

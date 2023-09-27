@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Công tắc và bóng đèn</title>
+</head>
+<body>
+<script>
+    class SwitchButton{
+        constructor(boolean,electriclamp) {
+            this.status= boolean;
+            this.lamp= electriclamp;
+        }
+        switchButton(){
+            document.write("Trạng thái của công tắc đang bật là: "+this.status+" và đèn của công tắc là: "+this.lamp+"<br>");
+        }
+        connecttoLamp(electriclamp){
+            electriclamp.status= this.status;
+        }
+        switchOff(den){
+            this.status= false;
+            den.status= false;
+            document.write("Công tắc đã tắt và trạng thái công tắc đang bật là: "+this.status+" và trạng thái đèn đang bật là: "+den.status+"<br>");
+        }
+        switchOn(den){
+            this.status = true;
+            den.status= true;
+            document.write("Công tắc đã bật và trạng thái công tắc đang bật là: "+this.status+" và trạng thái đèn đang bật là: "+den.status+"<br>");
+        }
+    }
+    class ElectricLamp{
+        constructor(boolean) {
+            this.status= boolean;
+        }
+        EletricLamp(){
+            document.write("Trạng thái đèn đang bật là: "+this.status+"<br>");
+        }
+        turnOff(congtac){
+            this.status= false;
+            congtac.status= false;
+            document.write("Trạng thái đèn đang bật là: "+this.status+" và trạng thái công tắc đang bật là: "+congtac.status+"<br>");
+        }
+        turnOn(congtac){
+            this.status= true;
+            congtac.status= true;
+            document.write("Trạng thái đèn đang bật là: "+this.status+" và trạng thái công tắc đang bật là: "+congtac.status+"<br>");
+        }
+    }
+    let congtac= new SwitchButton(true,"denpin");
+    let denpin= new ElectricLamp(false);
+    for (i=1;i<=10;i++){
+        document.write("Lần "+[i]+": ");
+        congtac.switchOff(denpin);
+        congtac.switchOn(denpin);
+    }
+</script>
+</body>
+</html>

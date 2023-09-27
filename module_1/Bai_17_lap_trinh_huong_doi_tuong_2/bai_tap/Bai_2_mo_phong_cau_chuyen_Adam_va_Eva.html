@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô phỏng câu chuyện Adam và Eva</title>
+</head>
+<body>
+<script>
+    class Human{
+        constructor(name,gender,weight) {
+            this.name= name;
+            this.gender= gender;
+            this.weight= weight;
+        }
+        human(){
+            document.write("Phương thức human(): tên: "+this.name+", giới tính có phải là nam không: "+this.gender+", cân nặng: "+this.gender+"<br>");
+        }
+        isMale(){
+            document.write("Phương thức isMale(): Giới tính "+this.name+" có phải nam không: "+this.gender+"<br>");
+        }
+        setGender(){
+            this.gender= prompt("Đặt lại giới tính "+this.name+" có phải là nam không(true hoặc false):");
+            document.write("Phương thức setGender(): Sau khi đặt lại, giới tính của "+this.name+" có phải là nam không: "+this.gender+"<br>");
+        }
+        checkApple(apple){
+            apple.Apple();
+        }
+        eatApple(apple){
+            if (apple.weight>0){
+                apple.weight-=1;
+                this.weight+=1;
+                document.write("Phương thức: eatApple(apple): Cân nặng quá táo hiện tại sau khi "+this.name+" ăn: "+apple.weight+"<br>");
+                document.write("Cân nặng hiện tại của "+this.name+" sau khi 1 miếng ăn táo là: "+this.weight+"<br>");
+            }
+            else document.write("Phương thức eatApple(apple): Không thể ăn táo vì táo đã hết!"+"<br>");
+        }
+        say(string){
+            console.log("Phương thức say(string): Lời "+this.name+" nói: "+string);
+        }
+        getName(){
+            document.write("Phương thức getName(): Tên lấy được là: "+this.name+"<br>");
+        }
+        setName(){
+            document.write("Phương thức setName(): Tên ban đầu là: "+this.name+"<br>");
+            this.name= prompt("Nhập tên:");
+            document.write("Tên sau khi đặt lại là: "+this.name+"<br>");
+        }
+        getWeight(){
+            document.write("Phương thức getWeight(): Cân nặng của "+this.name+" là: "+this.weight+"<br>");
+        }
+        setWeight(){
+            this.weight= prompt("Nhập cân nặng của "+this.name+":");
+            document.write("Phương thức setWeight(): Cân nặng của "+this.name+" sau khi đặt lại: "+this.weight+"<br>");
+        }
+    }
+    class Apple{
+        constructor() {
+            this.weight= 10;
+        }
+        Apple(){
+            document.write("Phương thức Apple(): Quả táo có cân nặng: "+this.weight+"<br>");
+        }
+        decrease(){
+            this.weight-=1;
+            document.write("Phương thức decrease(): Cân nặng của quả táo sau khi bị giảm là: "+this.weight+"<br>");
+        }
+        isEmpty(){
+            if (this.weight===0) return document.write("Phương thức isEmpty(): Kết quả kiểm tra quả táo đã hết chưa là: "+true+"<br>");
+            else return document.write("Phương thức isEmpty(): Kết quả kiểm tra quả táo đã hết chưa là: "+false+"<br>");
+        }
+        getWeight(){
+            document.write("Phương thức getWeight(): Cân nặng quả táo hiện tại: "+this.weight+"<br>");
+        }
+    }
+    let adam= new Human("Adam",true,70);
+    let eva= new Human("Eva",false,50);
+    let apple= new Apple();
+    document.write("Cân nặng của quả táo là: "+apple.weight+"<br>");
+    apple.Apple();
+    apple.decrease();
+    apple.decrease();
+    apple.decrease();
+    apple.decrease();
+    apple.decrease();
+    apple.decrease();
+    apple.decrease();
+    apple.decrease();
+    apple.decrease();
+    apple.isEmpty();
+    apple.getWeight();
+    adam.human();
+    eva.human();
+    adam.isMale();
+    eva.isMale();
+    adam.setGender();
+    eva.setGender();
+    adam.checkApple(apple);
+    adam.eatApple(apple);
+    eva.eatApple(apple);
+    adam.checkApple(apple);
+    apple.isEmpty();
+    adam.say("Hi");
+    adam.getName();
+    eva.getName();
+    adam.setName();
+    adam.getWeight();
+    adam.setWeight()
+</script>
+</body>
+</html>
