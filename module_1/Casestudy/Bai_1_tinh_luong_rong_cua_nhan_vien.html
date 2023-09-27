@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lương ròng của nhân viên</title>
+</head>
+<body>
+<script>
+    let tienLuong = +prompt("Nhập tiền lương của bạn:(bé hơn hoặc bằng 15 triệu đồng và đơn vị là nghìn đồng)");
+    let thueThuNhap;
+    let tienLuongRong;
+    if (tienLuong < 7000 && tienLuong > 0) {
+        thueThuNhap = tienLuong * 5 / 100;
+        tienLuongRong = tienLuong - thueThuNhap;
+        document.write("Thuế thu nhập cá nhân của bạn là: " + thueThuNhap +" nghìn đồng"+"<br>");
+        document.write("Tiền lương bạn nhận được là: " + tienLuongRong+" nghìn đồng");
+    } else if (tienLuong < 15000 && tienLuong>0) {
+        thueThuNhap = tienLuong * 10 / 100;
+        tienLuongRong = tienLuong - thueThuNhap;
+        document.write("Thuế thu nhập cá nhân của bạn là: " + thueThuNhap +" nghìn đồng"+ "<br>");
+        document.write("Tiền lương bạn nhận được là: " + tienLuongRong+" nghìn đồng");
+    } else if (tienLuong === 15000) {
+        thueThuNhap = tienLuong * 20 / 100;
+        tienLuongRong = tienLuong - thueThuNhap;
+        document.write("Thuế thu nhập cá nhân của bạn là: " + thueThuNhap+" nghìn đồng"+"<br>");
+        document.write("Tiền lương bạn nhận được là: " + tienLuongRong+" nghìn đồng");
+    } else if (tienLuong < 0 || tienLuong > 15000) {
+        while ((tienLuong < 0 || tienLuong > 15000) && tienLuong !== "a") {
+            tienLuong = +prompt("Tiền lương của bạn không hợp lệ! Hãy nhập lại (bé hoặc bằng 15 triệu đồng và đơn vị là nghìn đồng)(Nhập a để thoát):");
+            if (tienLuong < 7000 && tienLuong > 0) {
+                thueThuNhap = tienLuong * 5 / 100;
+                tienLuongRong = tienLuong - thueThuNhap;
+                document.write("Thuế thu nhập cá nhân của bạn là: " + thueThuNhap +" nghìn đồng"+ "<br>");
+                document.write("Tiền lương bạn nhận được là: " + tienLuongRong+" nghìn đồng");
+            } else if (tienLuong < 15000 && tienLuong>0) {
+                thueThuNhap = tienLuong * 10 / 100;
+                tienLuongRong = tienLuong - thueThuNhap;
+                document.write("Thuế thu nhập cá nhân của bạn là: " + thueThuNhap + " nghìn đồng" + "<br>");
+                document.write("Tiền lương bạn nhận được là: " + tienLuongRong+" nghìn đồng");
+            } else if (tienLuong === 15000) {
+                thueThuNhap = tienLuong * 20 / 100;
+                tienLuongRong = tienLuong - thueThuNhap;
+                document.write("Thuế thu nhập cá nhân của bạn là: " + thueThuNhap+" nghìn đồng"+"<br>");
+                document.write("Tiền lương bạn nhận được là: " + tienLuongRong+" nghìn đồng");
+            }
+        }
+    }
+</script>
+</body>
+</html>
