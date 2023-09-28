@@ -6,19 +6,17 @@
 </head>
 <body>
 <script>
-    let h= +prompt("Nhập chiều cao của tam giác vuông:");
-    for (i=0;i<h;i++){
-        for (j=0;j<=i;j++){
-            if (i===0 || i===1 || i===h-1) {
-                if (j===i) document.write("*"+"<br>");
+    let h = +prompt("Nhập chiều cao của tam giác vuông:");
+    for (i = 0; i < h; i++) {
+        for (j = 0; j <= i; j++) {
+            if (i === 0 || i === 1 || i === h - 1) {
+                if (j === i) document.write("*" + "<br>");
                 else document.write("*");
-            }
-            else {
-                if (j===0 || j===i) {
-                    if (j===0) document.write("*");
-                    else document.write("*"+"<br>");
-                }
-                else document.write("&nbsp&nbsp");
+            } else {
+                if (j === 0 || j === i) {
+                    if (j === 0) document.write("*");
+                    else document.write("*" + "<br>");
+                } else document.write("&nbsp&nbsp");
             }
         }
     }

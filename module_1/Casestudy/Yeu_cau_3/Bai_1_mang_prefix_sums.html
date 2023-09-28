@@ -6,13 +6,14 @@
 </head>
 <body>
 <script>
-    let mang1= [0,1,2,3,4,5];
-    let b= new Array(6);
-    for (i=0;i<6;b++){
-        for (j=0;j<=i;j++){
-            b[i]=
+    let mang1 = [0, 1, 2, 3, 4, 5];
+    let mang2 = new Array(0, 0, 0, 0, 0, 0);
+    for (i = 0; i < 6; i++) {
+        for (j = 0; j <= i; j++) {
+            mang2[i] += mang1[j];
         }
     }
+    document.write(mang2);
 </script>
 </body>
 </html>

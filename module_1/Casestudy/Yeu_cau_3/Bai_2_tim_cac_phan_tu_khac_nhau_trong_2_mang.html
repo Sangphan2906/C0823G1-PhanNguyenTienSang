@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>TÌm các phần tử khác nhau trong hai mảng</title>
+</head>
+<body>
+<script>
+    let soLuong1= +prompt("Nhập số lượng phần tử của mảng 1:");
+    let mang1= new Array(soLuong1);
+    for (i=0;i<mang1.length;i++){
+        mang1[i]= +prompt("Nhập giá trị phần tử của mảng 1 (số nguyên):");
+    }
+    mang1.sort((a,b)=> a-b);
+    let soLuong2= +prompt("Nhập số lượng phần tử của mảng 2:");
+    let mang2= new Array(soLuong2);
+    for (i=0;i<mang2.length;i++){
+        mang2[i]= +prompt("Nhập giá trị phần tử của mảng 2 (số nguyên)");
+    }
+    mang2.sort((a,b)=> b-a);
+    let phanTuKhac= [];
+    for (i=0;i<mang1.length;i++){
+        let demKhac=0;
+        for (j=0;j<mang2.length;j++){
+            if (mang1[i]!== mang2[j]) demKhac++;
+        }
+        if (demKhac===mang2.length) phanTuKhac.push(mang1[i]);
+    }
+    for (i=0;i<phanTuKhac.length;i++){
+        for (j=i+1;j<phanTuKhac.length;j++){
+            if (phanTuKhac[i]===phanTuKhac[j]) {
+                phanTuKhac.splice(j, 1);
+                j--;
+            }
+        }
+    }
+    document.write(phanTuKhac);
+</script>
+</body>
+</html>
