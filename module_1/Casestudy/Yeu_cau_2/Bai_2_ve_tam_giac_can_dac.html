@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ tam giác cân đặc</title>
+</head>
+<body>
+<script>
+    let chieuCao= +prompt("Nhập chiều cao của tam giác cân(số nguyên):");
+    for (i=0;i<chieuCao;i++){
+        for (j=0;j<(2*chieuCao-1);j++){
+            if (j>=chieuCao-1-i && j<=chieuCao-1+i) document.write("*");
+            else {
+                if (j===(2*chieuCao-2)) document.write("&nbsp&nbsp"+"<br>");
+                else document.write("&nbsp&nbsp");
+            }
+        }
+    }
+</script>
+</body>
+</html>
