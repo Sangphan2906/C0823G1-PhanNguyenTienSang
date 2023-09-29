@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuẩn hóa chuỗi và tìm ký tự dài nhất</title>
+</head>
+<body>
+<script>
+    let chuoi = prompt("Nhập chuỗi bạn cần chuẩn hóa:");
+
+    function chuanHoa() {
+        let mang = chuoi.split(" ");
+        for (i = 0; i < mang.length; i++) {
+            mang[i] = mang[i].split("");
+        }
+        document.write("Xâu ban đầu là: " + chuoi + "<br>");
+        for (i = 0; i < mang.length; i++) {
+            for (j = 0; j < mang[i].length; j++) {
+                if (j > 0) mang[i][j] = mang[i][j].toLowerCase();
+                else mang[i][j] = mang[i][j].toUpperCase();
+            }
+        }
+        for (i = 0; i < mang.length; i++) {
+            mang[i] = mang[i].join("");
+        }
+        chuoiSau = mang.join(" ");
+        document.write("Xâu sau chuẩn hóa: " + chuoiSau + "<br>");
+    }
+
+    function timMaxTrongChuoi() {
+        let mang = chuoi.split(" ");
+        for (i = 0; i < mang.length; i++) {
+            mang[i] = mang[i].split("");
+        }
+        max = mang[0];
+        for (i = 0; i < mang.length; i++) {
+            if (mang[i].length > max.length) max = mang[i];
+        }
+        for (i = 0; i < mang.length; i++) {
+            for (j = 0; j < mang[i].length; j++) {
+                if (j > 0) mang[i][j] = mang[i][j].toLowerCase();
+                else mang[i][j] = mang[i][j].toUpperCase();
+            }
+        }
+        let tuMax = max.join("");
+        document.write("Từ dài nhất trong xâu là: " + tuMax + "<br>");
+    }
+    chuanHoa();
+    timMaxTrongChuoi();
+</script>
+</body>
+</html>
