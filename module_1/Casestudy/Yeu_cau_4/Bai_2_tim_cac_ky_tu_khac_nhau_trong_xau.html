@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm các ký tự khác nhau trong xâu</title>
+</head>
+<body>
+<script>
+    let xau= prompt("Nhập xâu:");
+    let mang= xau.split("");
+    for (i=0;i<mang.length;i++){
+        for (j=i+1;j<mang.length;j++){
+            if (mang[i]===mang[j]) {
+                mang.splice(j,1);
+                j--;
+            }
+        }
+    }
+    document.write("Số lượng các ký tự khác nhau trong mảng là: "+mang.length);
+</script>
+</body>
+</html>
