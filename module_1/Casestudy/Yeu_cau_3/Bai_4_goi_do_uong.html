@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Gọi đồ uống</title>
+</head>
+<body>
+<script>
+    let doUong= +prompt("Hãy chọn đồ uống (nhập số thứ tự): 1. Cà phê 2. Cam vắt 3. Nước ép cà rốt 4. Nước ép cà chua 5. Nước lọc 6. Nước dừa 7. Hủy gọi đồ uống");
+    let gia=0;
+    while (doUong!==7){
+        switch (doUong){
+            case 1: {
+                let soLuong= +prompt("Cà phê có giá 13000 đồng/ly. Bạn muốn mua mấy ly?");
+                gia+= 13000*soLuong;
+                alert("Tổng tiền bạn phải trả là: "+gia);
+                doUong= +prompt("Hãy chọn đồ uống (nhập số thứ tự): 1. Cà phê 2. Cam vắt 3. Nước ép cà rốt 4. Nước ép cà chua 5. Nước lọc 6. Nước dừa 7. Hủy gọi đồ uống");
+                break;
+            }
+            case 2: {
+                let soLuong= +prompt("Cam vắt có giá 27000 đồng/ly. Bạn muốn mua mấy ly?");
+                gia+= 27000*soLuong;
+                alert("Tổng tiền bạn phải trả là: "+gia);
+                doUong= +prompt("Hãy chọn đồ uống (nhập số thứ tự): 1. Cà phê 2. Cam vắt 3. Nước ép cà rốt 4. Nước ép cà chua 5. Nước lọc 6. Nước dừa 7. Hủy gọi đồ uống");
+                break;
+            }
+            case 3: {
+                let soLuong= +prompt("Nước ép cà rốt có giá 25000 đồng/ly. Bạn muốn mua mấy ly?");
+                gia+= 25000*soLuong;
+                alert("Tổng tiền bạn phải trả là: "+gia);
+                doUong= +prompt("Hãy chọn đồ uống (nhập số thứ tự): 1. Cà phê 2. Cam vắt 3. Nước ép cà rốt 4. Nước ép cà chua 5. Nước lọc 6. Nước dừa 7. Hủy gọi đồ uống");
+                break;
+            }
+            case 4: {
+                let soLuong= +prompt("Nước ép cà chua có giá 26000 đồng/ly. Bạn muốn mua bao nhiêu ly?");
+                gia+= 26000*soLuong;
+                alert("Tổng số tiền bạn phải trả là: "+gia);
+                doUong= +prompt("Hãy chọn đồ uống (nhập số thứ tự): 1. Cà phê 2. Cam vắt 3. Nước ép cà rốt 4. Nước ép cà chua 5. Nước lọc 6. Nước dừa 7. Hủy gọi đồ uống");
+                break;
+            }
+            case 5: {
+                let soLuong= +prompt("Nước lọc có giá 8000 đồng/chai. Bạn muốn mua bao nhiêu chai?");
+                gia+= 8000*soLuong;
+                alert("Tổng số tiền bạn phải trả là: "+gia);
+                doUong= +prompt("Hãy chọn đồ uống (nhập số thứ tự): 1. Cà phê 2. Cam vắt 3. Nước ép cà rốt 4. Nước ép cà chua 5. Nước lọc 6. Nước dừa 7. Hủy gọi đồ uống");
+                break;
+            }
+            case 6: {
+                let soLuong= +prompt("Nước dừa có giá 15000 đồng/ly. Bạn muốn mua bao nhiêu ly?");
+                gia+= 15000*soLuong;
+                alert("Tổng số tiền bạn phải trả là: "+gia);
+                doUong= +prompt("Hãy chọn đồ uống (nhập số thứ tự): 1. Cà phê 2. Cam vắt 3. Nước ép cà rốt 4. Nước ép cà chua 5. Nước lọc 6. Nước dừa 7. Hủy gọi đồ uống");
+                break;
+            }
+        }
+    }
+    alert("Tổng số tiền bạn phải trả là: "+gia);
+</script>
+</body>
+</html>

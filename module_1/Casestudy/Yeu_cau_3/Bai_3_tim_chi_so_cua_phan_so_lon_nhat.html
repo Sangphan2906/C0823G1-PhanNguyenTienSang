@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm chỉ số của phân số lớn nhất</title>
+</head>
+<body>
+<script>
+    let soLuongPhanSo = +prompt("Số lượng phân số bạn muốn tạo là:");
+    let tuSo = new Array(soLuongPhanSo);
+    let mauSo = new Array(soLuongPhanSo);
+    for (i = 0; i < tuSo.length; i++) {
+        tuSo[i] = +prompt("Nhập giá trị tử số của phân số ở vị trí thứ " + i + ":");
+    }
+    for (i = 0; i < mauSo.length; i++) {
+        let giaTriMauSo = +prompt("Nhập giá trị mẫu số của phân số ở vị trí thứ " + i + ":");
+        if (giaTriMauSo !== 0) mauSo[i] = giaTriMauSo;
+        else {
+            while (giaTriMauSo === 0) {
+                giaTriMauSo = +prompt("Giá trị mẫu số không hợp lệ!Hãy nhập lại:");
+                if (giaTriMauSo !== 0) mauSo[i] = giaTriMauSo;
+            }
+        }
+    }
+    let phanSo = [];
+    for (i = 0; i < soLuongPhanSo; i++) {
+        phanSo.push(tuSo[i] / mauSo[i]);
+    }
+    let max = phanSo[0]
+    for (i = 0; i < phanSo.length; i++) {
+        if (phanSo[i] > max) max = phanSo[i];
+    }
+    let hienthi = "Các phân số ban đầu là:"
+    for (i = 0; i < soLuongPhanSo; i++) {
+        if (i === soLuongPhanSo - 1) hienthi += " " + tuSo[i] + "/" + mauSo[i] + ".";
+        else hienthi += " " + tuSo[i] + "/" + mauSo[i] + ",";
+    }
+    document.write(hienthi + "<br>");
+    for (i = 0; i < phanSo.length; i++) {
+        if (max === phanSo[i]) document.write("Phân số lớn nhất là " + tuSo[i] + "/" + mauSo[i] + " và nằm ở vị trí " + (i + 1) + "<br>");
+    }
+</script>
+</body>
+</html>
