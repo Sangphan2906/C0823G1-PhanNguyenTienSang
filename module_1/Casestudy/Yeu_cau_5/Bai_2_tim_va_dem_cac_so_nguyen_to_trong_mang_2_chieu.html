@@ -9,15 +9,23 @@
     let hang= +prompt("Nhập số hàng của mảng 2 chiều:");
     let cot= +prompt("Nhập số cột của mảng 2 chiều:");
     let mang= new Array(hang);
-    for (i=0;i<hang<i++){
+    for (i=0;i<hang;i++){
         mang[i]= new Array(cot);
         for (j=0;j<cot;j++){
             mang[i][j]= +prompt("Nhập giá trị phần tử của mảng 2 chiều ở hàng "+i+" cột "+j+":");
         }
     }
-    for (i=0;i<hang;i++){
-        for (j)
+    let soNguyenTo=[];
+    for (i=0;i<mang.length;i++){
+        for (j=0;j<mang[i].length;j++){
+            let count=0;
+            for (k=1;k<=mang[i][j];k++){
+                if (mang[i][j]%k===0) count++;
+            }
+            if (count===2) soNguyenTo.push(mang[i][j]);
+        }
     }
+    document.write("Các số nguyên tố trong mảng 2 chiều là: "+ soNguyenTo+"<br>"+"Số lượng số nguyên tố trong mảng 2 chiêu là: "+soNguyenTo.length);
 </script>
 </body>
 </html>
