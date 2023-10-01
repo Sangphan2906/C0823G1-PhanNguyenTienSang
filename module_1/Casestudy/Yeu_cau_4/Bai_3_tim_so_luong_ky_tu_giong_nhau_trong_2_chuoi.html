@@ -6,27 +6,27 @@
 </head>
 <body>
 <script>
-    let soLuong1= prompt("Nhập số lượng phần tử mảng 1:");
-    let mang1= new Array(soLuong1);
-    for (i=0;i<soLuong1;i++){
-        mang1[i]= prompt("Nhập giá trị phần tử thứ "+i+' của mảng 1:');
+    let soLuong1 = prompt("Nhập số lượng phần tử mảng 1:");
+    let mang1 = new Array(soLuong1);
+    for (i = 0; i < soLuong1; i++) {
+        mang1[i] = prompt("Nhập giá trị phần tử thứ " + i + ' của mảng 1:');
     }
-    let soLuong2= prompt("Nhập số lượng phần tử mảng 2");
-    let mang2= new Array(soLuong2);
-    for (i=0;i<soLuong2;i++){
-        mang2[i]= prompt("Nhập giá trị phần tử thứ "+i+"của mảng 2:");
+    let soLuong2 = prompt("Nhập số lượng phần tử mảng 2");
+    let mang2 = new Array(soLuong2);
+    for (i = 0; i < soLuong2; i++) {
+        mang2[i] = prompt("Nhập giá trị phần tử thứ " + i + "của mảng 2:");
     }
-    let phanTuChung=[];
-    for (i=0;i<mang1.length;i++){
-        for (j=0;j<mang2.length;j++){
-            if (mang1[i]===mang2[j]) {
-                mang2.splice(j,1);
+    let phanTuChung = [];
+    for (i = 0; i < mang1.length; i++) {
+        for (j = 0; j < mang2.length; j++) {
+            if (mang1[i] === mang2[j]) {
+                mang2.splice(j, 1);
                 phanTuChung.push(mang1[i]);
                 break;
             }
         }
     }
-    document.write("Số lượng ký tự chung của 2 măng là: "+phanTuChung.length);
+    document.write("Số lượng ký tự chung của 2 măng là: " + phanTuChung.length);
 </script>
 </body>
 </html>
