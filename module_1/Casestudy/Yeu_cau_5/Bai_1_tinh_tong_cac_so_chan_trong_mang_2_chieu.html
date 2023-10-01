@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng các số chẵn trong mảng 2 chiều</title>
+</head>
+<body>
+<script>
+    let hang = +prompt("Nhập số hàng của mảng 2 chiều:");
+    let cot = +prompt("Nhập số cột của mảng 2 chiều:");
+    let mang = new Array(hang);
+    for (i = 0; i < hang; i++) {
+        mang[i] = new Array(cot);
+        for (j = 0; j < cot; j++) {
+            mang[i][j] = +prompt("Nhập giá trị phần tử của mảng ở hàng " + i + " cột " + j + ":");
+        }
+    }
+    let soChan = [];
+    for (i = 0; i < hang; i++) {
+        for (j = 0; j < cot; j++) {
+            if (mang[i][j] % 2 === 0) soChan.push(mang[i][j]);
+        }
+    }
+    tong = 0;
+    for (i = 0; i < soChan.length; i++) {
+        tong += soChan[i];
+    }
+    let hienThi = "Mảng ban đầu là: <br>";
+    for (i = 0; i < hang; i++) {
+        for (j = 0; j < cot; j++) {
+            if (j === cot - 1) hienThi += " " + mang[i][j] + '.' +"<br>";
+            else hienThi += " " + mang[i][j] + ',';
+        }
+    }
+    document.write(hienThi);
+    document.write("Tổng các số chẵn có trong mảng ban đầu là :" + tong);
+</script>
+</body>
+</html>
