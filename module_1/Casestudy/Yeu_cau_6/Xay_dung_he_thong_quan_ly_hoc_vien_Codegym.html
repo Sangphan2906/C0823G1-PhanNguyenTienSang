@@ -6,7 +6,7 @@
 </head>
 <body>
 <form>
-    <button type="button" onclick="them()">Thêm mới học viên</button>
+    <button type="button" onclick="themmoi()">Thêm mới học viên</button>
     <button type="button" onclick="sua()">Sửa thông tin học viên</button>
     <button type="button" onclick="xoa()">Xóa học viên</button>
 </form>
@@ -18,7 +18,18 @@
     let danhSachHocVien = [];
     let xacNhan;
 
-    function them() {
+    class QuanLyHocVien {
+        constructor(mahocvien, ten, lop, email, ngaysinh, module) {
+            this.maHocVien = mahocvien;
+            this.ten = ten;
+            this.lop = lop;
+            this.email = email;
+            this.ngaysinh = ngaysinh;
+            this.module = module;
+        }
+    }
+
+    function themmoi() {
         do {
             let thongTinHocVien = [];
             let maHocVien = prompt("Nhập mã học viên:");
@@ -36,7 +47,8 @@
             danhSachHocVien.push(thongTinHocVien);
             xacNhan = confirm("Bạn có muốn tiếp tục thêm học viên không?");
         } while (xacNhan === true);
-        table = "<table border=1> <tr>\n" +
+        let j;
+        let table = "<table border=1> <tr>\n" +
             "        <th>Mã học viên</th>\n" +
             "        <th>Tên</th>\n" +
             "        <th>Lớp</th>\n" +
@@ -83,7 +95,7 @@
                 break;
             } else if (i === danhSachHocVien.length - 1) alert("Mã học viên không tồn tại!");
         }
-        table = "<table border=1> <tr>\n" +
+        let table = "<table border=1> <tr>\n" +
             "        <th>Mã học viên</th>\n" +
             "        <th>Tên</th>\n" +
             "        <th>Lớp</th>\n" +
@@ -109,7 +121,7 @@
             else if (i === danhSachHocVien.length - 1) alert("Mã học viên không tồn tại");
 
         }
-        table = "<table border=1> <tr>\n" +
+        let table = "<table border=1> <tr>\n" +
             "        <th>Mã học viên</th>\n" +
             "        <th>Tên</th>\n" +
             "        <th>Lớp</th>\n" +
@@ -127,6 +139,8 @@
         table += "</table>";
         document.getElementById("hienthi").innerHTML = table;
     }
+
+    let quanlyHocVien1 = new QuanLyHocVien("HV-01", "An", "01", "an@gmail.com", "09/03/2013", "1");
 </script>
 </body>
 </html>
