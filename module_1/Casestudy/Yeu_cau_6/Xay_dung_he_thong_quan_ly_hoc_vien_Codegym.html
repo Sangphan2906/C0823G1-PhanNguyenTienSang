@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng hệ thống quản lý học viên Codegym</title>
+</head>
+<body>
+<form>
+    <button type="button" onclick="them()">Thêm mới học viên</button>
+    <button type="button" onclick="sua()">Sửa thông tin học viên</button>
+    <button type="button" onclick="xoa()">Xóa học viên</button>
+</form>
+<table>
+
+</table>
+<div id="hienthi"></div>
+<script>
+    let danhSachHocVien = [];
+    let xacNhan;
+
+    function them() {
+        do {
+            let thongTinHocVien = [];
+            let maHocVien = prompt("Nhập mã học viên:");
+            thongTinHocVien.push(maHocVien);
+            let ten = prompt("Nhập tên học viên:");
+            thongTinHocVien.push(ten);
+            let lop = prompt("Nhập tên lớp của học viên:");
+            thongTinHocVien.push(lop);
+            let email = prompt("Nhập emali của học viên:");
+            thongTinHocVien.push(email);
+            let ngaySinh = prompt("Nhập ngày sinh của học viên dưới dạng dd/mm/yy:");
+            thongTinHocVien.push(ngaySinh);
+            let module = prompt("Nhập module của học viên:");
+            thongTinHocVien.push(module);
+            danhSachHocVien.push(thongTinHocVien);
+            xacNhan = confirm("Bạn có muốn tiếp tục thêm học viên không?");
+        } while (xacNhan === true);
+        table = "<table border=1> <tr>\n" +
+            "        <th>Mã học viên</th>\n" +
+            "        <th>Tên</th>\n" +
+            "        <th>Lớp</th>\n" +
+            "        <th>Email</th>\n" +
+            "        <th>Ngày sinh</th>\n" +
+            "        <th>Module</th>\n" +
+            "    </tr>"
+        for (i = 0; i < danhSachHocVien.length; i++) {
+            table += "<tr>";
+            for (j = 0; j < danhSachHocVien[i].length; j++) {
+                table += "<td>" + danhSachHocVien[i][j] + "</td>";
+            }
+            table += "</tr>";
+        }
+        table += "</table>";
+        document.getElementById("hienthi").innerHTML = table;
+    }
+
+    function sua() {
+        let noiSua = prompt("Nhập mã học viên của học viên cần sửa thông tin:");
+        for (i = 0; i < danhSachHocVien.length; i++) {
+            if (danhSachHocVien[i][0] === noiSua) {
+                for (k = 0; k < danhSachHocVien[i].length; k++) {
+                    switch (k) {
+                        case 0:
+                            danhSachHocVien[i][k] = prompt("Nhập lại mã học viên của học viên:");
+                            break;
+                        case 1:
+                            danhSachHocVien[i][k] = prompt("Nhập lại tên của học viên:");
+                            break;
+                        case 2:
+                            danhSachHocVien[i][k] = prompt("Nhập lại lớp của học viên:");
+                            break;
+                        case 3:
+                            danhSachHocVien[i][k] = prompt("Nhập lại email của học viên:");
+                            break;
+                        case 4:
+                            danhSachHocVien[i][k] = prompt("Nhập lại ngày sinh của học viên (dưới dạng dd/mm/yy):");
+                            break;
+                        default:
+                            danhSachHocVien[i][k] = prompt("Nhập lại module của học viên:");
+                    }
+                }
+                break;
+            } else if (i === danhSachHocVien.length - 1) alert("Mã học viên không tồn tại!");
+        }
+        table = "<table border=1> <tr>\n" +
+            "        <th>Mã học viên</th>\n" +
+            "        <th>Tên</th>\n" +
+            "        <th>Lớp</th>\n" +
+            "        <th>Email</th>\n" +
+            "        <th>Ngày sinh</th>\n" +
+            "        <th>Module</th>\n" +
+            "    </tr>"
+        for (i = 0; i < danhSachHocVien.length; i++) {
+            table += "<tr>";
+            for (j = 0; j < danhSachHocVien[i].length; j++) {
+                table += "<td>" + danhSachHocVien[i][j] + "</td>";
+            }
+            table += "</tr>";
+        }
+        table += "</table>";
+        document.getElementById("hienthi").innerHTML = table;
+    }
+
+    function xoa() {
+        let xoaHocVien = prompt("Nhập mã học viên của học viên cần xóa khỏi danh sách:");
+        for (i = 0; i < danhSachHocVien.length; i++) {
+            if (danhSachHocVien[i][0] === xoaHocVien) danhSachHocVien.splice(i, 1);
+            else if (i === danhSachHocVien.length - 1) alert("Mã học viên không tồn tại");
+
+        }
+        table = "<table border=1> <tr>\n" +
+            "        <th>Mã học viên</th>\n" +
+            "        <th>Tên</th>\n" +
+            "        <th>Lớp</th>\n" +
+            "        <th>Email</th>\n" +
+            "        <th>Ngày sinh</th>\n" +
+            "        <th>Module</th>\n" +
+            "    </tr>"
+        for (i = 0; i < danhSachHocVien.length; i++) {
+            table += "<tr>";
+            for (j = 0; j < danhSachHocVien[i].length; j++) {
+                table += "<td>" + danhSachHocVien[i][j] + "</td>";
+            }
+            table += "</tr>";
+        }
+        table += "</table>";
+        document.getElementById("hienthi").innerHTML = table;
+    }
+</script>
+</body>
+</html>
