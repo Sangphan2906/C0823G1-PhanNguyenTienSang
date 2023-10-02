@@ -6,7 +6,7 @@
 </head>
 <body>
 <form>
-    <button type="button" onclick="themmoi()">Thêm mới học viên</button>
+    <button type="button" onclick="themMoi()">Thêm mới học viên</button>
     <button type="button" onclick="sua()">Sửa thông tin học viên</button>
     <button type="button" onclick="xoa()">Xóa học viên</button>
 </form>
@@ -25,26 +25,7 @@
             this.module = module;
         }
     }
-
-    function themmoi() {
-        do {
-            let thongTinHocVien = [];
-            let maHocVien = prompt("Nhập mã học viên:");
-            thongTinHocVien.push(maHocVien);
-            let ten = prompt("Nhập tên học viên:");
-            thongTinHocVien.push(ten);
-            let lop = prompt("Nhập tên lớp của học viên:");
-            thongTinHocVien.push(lop);
-            let email = prompt("Nhập emali của học viên:");
-            thongTinHocVien.push(email);
-            let ngaySinh = prompt("Nhập ngày sinh của học viên dưới dạng dd/mm/yy:");
-            thongTinHocVien.push(ngaySinh);
-            let module = prompt("Nhập module của học viên:");
-            thongTinHocVien.push(module);
-            danhSachHocVien.push(thongTinHocVien);
-            xacNhan = confirm("Bạn có muốn tiếp tục thêm học viên không?");
-        } while (xacNhan === true);
-        let j;
+    function hienThi(){
         let table = "<table border=1> <tr>\n" +
             "        <th>Mã học viên</th>\n" +
             "        <th>Tên</th>\n" +
@@ -62,6 +43,26 @@
         }
         table += "</table>";
         document.getElementById("hienthi").innerHTML = table;
+    }
+    function themMoi() {
+        do {
+            let thongTinHocVien = [];
+            let maHocVien = prompt("Nhập mã học viên:");
+            thongTinHocVien.push(maHocVien);
+            let ten = prompt("Nhập tên học viên:");
+            thongTinHocVien.push(ten);
+            let lop = prompt("Nhập tên lớp của học viên:");
+            thongTinHocVien.push(lop);
+            let email = prompt("Nhập emali của học viên:");
+            thongTinHocVien.push(email);
+            let ngaySinh = prompt("Nhập ngày sinh của học viên dưới dạng dd/mm/yy:");
+            thongTinHocVien.push(ngaySinh);
+            let module = prompt("Nhập module của học viên:");
+            thongTinHocVien.push(module);
+            danhSachHocVien.push(thongTinHocVien);
+            xacNhan = confirm("Bạn có muốn tiếp tục thêm học viên không?");
+        } while (xacNhan === true);
+        hienThi();
     }
 
     function sua() {
@@ -92,23 +93,7 @@
                 break;
             } else if (i === danhSachHocVien.length - 1) alert("Mã học viên không tồn tại!");
         }
-        let table = "<table border=1> <tr>\n" +
-            "        <th>Mã học viên</th>\n" +
-            "        <th>Tên</th>\n" +
-            "        <th>Lớp</th>\n" +
-            "        <th>Email</th>\n" +
-            "        <th>Ngày sinh</th>\n" +
-            "        <th>Module</th>\n" +
-            "    </tr>"
-        for (i = 0; i < danhSachHocVien.length; i++) {
-            table += "<tr>";
-            for (j = 0; j < danhSachHocVien[i].length; j++) {
-                table += "<td>" + danhSachHocVien[i][j] + "</td>";
-            }
-            table += "</tr>";
-        }
-        table += "</table>";
-        document.getElementById("hienthi").innerHTML = table;
+        hienThi();
     }
 
     function xoa() {
@@ -118,25 +103,8 @@
             else if (i === danhSachHocVien.length - 1) alert("Mã học viên không tồn tại");
 
         }
-        let table = "<table border=1> <tr>\n" +
-            "        <th>Mã học viên</th>\n" +
-            "        <th>Tên</th>\n" +
-            "        <th>Lớp</th>\n" +
-            "        <th>Email</th>\n" +
-            "        <th>Ngày sinh</th>\n" +
-            "        <th>Module</th>\n" +
-            "    </tr>"
-        for (i = 0; i < danhSachHocVien.length; i++) {
-            table += "<tr>";
-            for (j = 0; j < danhSachHocVien[i].length; j++) {
-                table += "<td>" + danhSachHocVien[i][j] + "</td>";
-            }
-            table += "</tr>";
-        }
-        table += "</table>";
-        document.getElementById("hienthi").innerHTML = table;
+        hienThi();
     }
-
     let quanlyHocVien1 = new QuanLyHocVien("HV-01", "An", "01", "an@gmail.com", "09/03/2013", "1");
 </script>
 </body>
