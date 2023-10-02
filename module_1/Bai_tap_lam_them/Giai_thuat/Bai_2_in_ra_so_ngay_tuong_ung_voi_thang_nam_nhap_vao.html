@@ -6,60 +6,87 @@
 </head>
 <body>
 <script>
-    let nam= +prompt("Nhập số năm bạn muốn tìm ngày:");
-    let thang= +prompt("Nhập số tháng bạn muốn tìm ngày:");
-    if (nam%100===0){
-        if (nam%400===0){
-            switch (thang){
+    let nam = +prompt("Nhập số năm bạn muốn tìm ngày:");
+    let thang = +prompt("Nhập số tháng bạn muốn tìm ngày:");
+    if (nam % 100 === 0) {
+        if (nam % 400 === 0) {
+            switch (thang) {
                 case 1:
                 case 3:
                 case 5:
                 case 7:
                 case 8:
                 case 10:
-                case 12: document.write("Vào năm "+nam+" ở tháng "+thang+" có 31 ngày");
-                break;
-                case 4:
-                case 6:
-                case 9:
-                case 11: document.write("Vào năm "+nam+" ở tháng "+thang+" có 30 ngày");
-                case 2: document.write("Vào năm "+nam+" ở tháng "+thang+" có 29 ngày");
-            }
-        }
-        else {
-            switch (thang){
-                case 1:
-                case 3:
-                case 5:
-                case 7:
-                case 8:
-                case 10:
-                case 12: document.write("Vào năm "+nam+" ở tháng "+thang+" có 31 ngày");
+                case 12:
+                    document.write("Vào năm " + nam + " ở tháng " + thang + " có 31 ngày");
                     break;
                 case 4:
                 case 6:
                 case 9:
-                case 11: document.write("Vào năm "+nam+" ở tháng "+thang+" có 30 ngày");
-                case 2: document.write("Vào năm "+nam+" ở tháng "+thang+" có 28 ngày");
+                case 11:
+                    document.write("Vào năm " + nam + " ở tháng " + thang + " có 30 ngày");
+                break;
+                case 2:
+                    document.write("Vào năm " + nam + " ở tháng " + thang + " có 29 ngày");
+            }
+        } else {
+            switch (thang) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.write("Vào năm " + nam + " ở tháng " + thang + " có 31 ngày");
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.write("Vào năm " + nam + " ở tháng " + thang + " có 30 ngày");
+                case 2:
+                    document.write("Vào năm " + nam + " ở tháng " + thang + " có 28 ngày");
             }
         }
-    }
-    else if (nam%4===0) {
-        switch (thang){
+    } else if (nam % 4 === 0) {
+        switch (thang) {
             case 1:
             case 3:
             case 5:
             case 7:
             case 8:
             case 10:
-            case 12: document.write("Vào năm "+nam+" ở tháng "+thang+" có 31 ngày");
-            break;
+            case 12:
+                document.write("Vào năm " + nam + " ở tháng " + thang + " có 31 ngày");
+                break;
             case 4:
             case 6:
             case 9:
-            case 11: document.write("Vào năm "+nam+" ở tháng "+thang+" có 30 ngày");
-            break;
-            case 2: document.write("Vào năm "+nam+" ở tháng "+thang+" có 29 ngày");
+            case 11:
+                document.write("Vào năm " + nam + " ở tháng " + thang + " có 30 ngày");
+                break;
+            case 2:
+                document.write("Vào năm " + nam + " ở tháng " + thang + " có 29 ngày");
+        }
+    } else {
+        switch (thang) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.write("Vào năm " + nam + " ở tháng " + thang + " có 31 ngày");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.write("Vào năm " + nam + " ở tháng " + thang + " có 30 ngày");
+            case 2:
+                document.write("Vào năm " + nam + " ở tháng " + thang + " có 28 ngày");
         }
     }
 </script>
