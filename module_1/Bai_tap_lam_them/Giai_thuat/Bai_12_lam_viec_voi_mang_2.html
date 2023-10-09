@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Làm việc với mảng 2</title>
+</head>
+<body>
+<script>
+    let hang = +prompt("Nhập số hàng của mảng 2 chiều:");
+    let cot = +prompt("Nhập số cột của mảng 2 chiều:");
+    let mang = new Array(hang);
+    for (i = 0; i < hang; i++) {
+        mang[i] = new Array(cot);
+        for (j = 0; j < cot; j++) {
+            mang[i][j] = +prompt("Nhập giá trị phần tử ở vị trí hàng " + i + " cột " + j + " (số nguyên):");
+        }
+    }
+    let tich=1;
+    for (i=0;i<mang[0].length;i++){
+        if (mang[0][i]%3===0) tich*=mang[0][i];
+    }
+</script>
+</body>
+</html>

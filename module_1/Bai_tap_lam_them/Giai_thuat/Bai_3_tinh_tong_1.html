@@ -6,7 +6,15 @@
 </head>
 <body>
 <script>
-
+    let tong = 0;
+    let n = +prompt("Nhập số n:");
+    let hienThi = ""
+    for (i = 1; i <= n; i++) {
+        tong += 1 / i;
+        if (i < n) hienThi += "1/" + i + "+";
+        else hienThi += "1/" + i + "=";
+    }
+    document.write(hienThi + tong);
 </script>
 </body>
 </html>

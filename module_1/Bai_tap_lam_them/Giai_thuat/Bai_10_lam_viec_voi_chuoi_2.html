@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Làm việc với chuỗi 2</title>
+</head>
+<body>
+<script>
+    let chuoi = prompt("Nhập chuỗi:");
+    let mang1 = chuoi.split("");
+    for (i = 0; i < mang1.length; i++) {
+        document.write(mang1[i] + "<br>");
+    }
+    document.write("Số lượng kí tự có trong mảng là: " + mang1.length + "<br>")
+    let mang2 = mang1;
+    for (i = 0; i < mang2.length; i++) {
+        let count = 0;
+        for (j = 0; j < mang1.length; j++) {
+            if (mang2[i] === mang1[j]) count++;
+        }
+        document.write("Số lần lặp lại của ký tự " + mang2[i] + " là " + count + "<br>");
+    }
+</script>
+</body>
+</html>

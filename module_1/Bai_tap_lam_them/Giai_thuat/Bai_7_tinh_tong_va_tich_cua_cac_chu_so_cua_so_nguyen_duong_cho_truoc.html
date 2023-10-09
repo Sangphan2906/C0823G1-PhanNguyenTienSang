@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng và tích của các chữ số của số nguyên dương cho trước</title>
+</head>
+<body>
+<script>
+    let so = prompt("Nhập số bạn muốn tính tổng và tích của các chữ số của nó:");
+    let mang = so.split("");
+    for (i = 0; i < mang.length; i++) {
+        mang[i] = parseInt(mang[i]);
+    }
+    let tong = 0;
+    let tich = 1;
+    for (i = 0; i < mang.length; i++) {
+        tong += mang[i];
+        tich *= mang[i];
+    }
+    document.write("Tổng của các chữ số của số " + so + " là: " + tong + " và tích của các chữ số của số " + so + " là: " + tich);
+</script>
+</body>
+</html>

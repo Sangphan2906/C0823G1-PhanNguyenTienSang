@@ -2,14 +2,14 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>In ra n hàng và n cột</title>
+    <title>In ra n hàng và 5 cột</title>
 </head>
 <body>
 <script>
-    let n= +prompt("Nhập chiều cao của tháp:");
-    for (i=0;i<n;i++){
-        for (j=0;j<n;j++){
-            if (j===n-1) document.write("*"+"<br>");
+    let n = +prompt("Nhập chiều cao của tháp:");
+    for (i = 0; i < n; i++) {
+        for (j = 0; j <5; j++) {
+            if (j === 4) document.write("*" + "<br>");
             else document.write("*");
         }
     }

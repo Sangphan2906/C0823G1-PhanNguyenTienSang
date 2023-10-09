@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Cấp số nhân của số chẵn hoặc số lẻ</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập số cuối cùng của cấp số nhân:");
+    let tich = 1;
+    let hienThi = "";
+    if (n === 0) document.write("Kết quả của cấp số nhân là: 0");
+    else {
+        if (n % 2 === 0) {
+            for (let i = 2; i <= n; i = i + 2) {
+                tich *= i;
+                if (i === n) hienThi += i + "=";
+                else hienThi += i + "*";
+            }
+        } else {
+            for (i = 1; i <= n; i = i + 2) {
+                tich *= i;
+                if (i === n) hienThi += i + "=";
+                else hienThi += i + "*";
+            }
+        }
+        document.write("Kết quả của cấp số nhân là: " + hienThi + tich);
+    }
+</script>
+</body>
+</html>

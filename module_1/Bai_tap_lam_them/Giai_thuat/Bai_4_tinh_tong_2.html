@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng 2</title>
+</head>
+<body>
+<script>
+    let tong = 15;
+    let n = +prompt("Nhập số n:");
+    for (i = 1; i <= n; i++) {
+        let giaiThua = 1;
+        for (j = 1; j <= i; j++) {
+            giaiThua *= j;
+        }
+        console.log(giaiThua);
+        tong += Math.pow(-1, i) / giaiThua;
+    }
+    document.write("Tổng cần tìm là: " + tong);
+</script>
+</body>
+</html>

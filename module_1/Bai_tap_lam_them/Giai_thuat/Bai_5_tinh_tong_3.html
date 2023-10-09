@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng 3</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập số cuối cùng của cấp số cộng (số lẻ):");
+    let tong = 0;
+    let hienThi = "";
+    for (i = 1; i <= n; i += 2) {
+        let giaiThua = 1;
+        for (j = 1; j <= i; j++) {
+            giaiThua *= j;
+        }
+        tong += 1 / giaiThua;
+        if (i === n) hienThi += "1/" + i + "!=";
+        else hienThi += "1/" + i + "!" + "+";
+    }
+    document.write(hienThi + tong);
+</script>
+</body>
+</html>

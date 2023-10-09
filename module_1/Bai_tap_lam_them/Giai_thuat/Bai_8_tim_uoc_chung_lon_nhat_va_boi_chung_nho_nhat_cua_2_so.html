@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm ước chung lớn nhất và bội chung nhỏ nhất của 2 số</title>
+</head>
+<body>
+<script>
+    let so1 = +prompt("Nhập số thứ nhất:");
+    let so2 = +prompt("Nhập số thứ hai:");
+    let uoc1 = [];
+    let uoc2 = [];
+    let uocChung = [];
+    for (i = 0; i < so1; i++) {
+        if (so1 % i === 0) uoc1.push(i);
+    }
+    for (i = 0; i < so2; i++) {
+        if (so2 % i === 0) uoc2.push(i);
+    }
+    for (i = 0; i < uoc1.length; i++) {
+        for (j = 0; j < uoc2.length; j++) {
+            if (uoc1[i] === uoc2[j]) uocChung.push(uoc1[i]);
+        }
+    }
+    max = uocChung[0];
+    for (i = 0; i < uocChung.length; i++) {
+        if (uocChung[i] > max) max = uocChung[i];
+    }
+    let uocChungLonNhat = max;
+    let coSo1 = [];
+    let mu1 = [];
+    let coSo2 = [];
+    let mu2 = [];
+
+</script>
+</body>
+</html>

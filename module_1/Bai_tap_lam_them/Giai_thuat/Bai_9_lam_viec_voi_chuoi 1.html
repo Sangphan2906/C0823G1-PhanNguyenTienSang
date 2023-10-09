@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Làm việc với chuỗi 1</title>
+</head>
+<body>
+<script>
+    let chuoi = prompt("Nhập chuỗi:");
+    mang = chuoi.split("");
+    let doiCho;
+    document.write("Chuỗi ban đầu là: " + chuoi + "<br>");
+
+    function daoNguoc(mang) {
+        for (i = 0; i < (mang.length - 1) / 2; i++) {
+            doiCho = mang[i];
+            mang[i] = mang[mang.length - 1 - i];
+            mang[mang.length - 1 - i] = doiCho;
+        }
+        document.write("Chuỗi sau khi đảo ngược: " + mang.join("") + "<br>");
+    }
+
+    function inHoa(mang) {
+        for (i = 0; i < mang.length; i++) {
+            mang[i] = mang[i].toUpperCase();
+        }
+        document.write("Mảng sau khi in hoa là: " + mang.join("") + "<br>");
+    }
+
+    function inThuong(mang) {
+        for (i = 0; i < mang.length; i++) {
+            mang[i] = mang[i].toLowerCase();
+        }
+        document.write("Mảng sau khi in thường: " + mang.join(""));
+    }
+
+    function daoNguocHoaThuong(mang) {
+        for (i = 0; i < mang.length; i++) {
+            if (chuoi.charCodeAt(i) >= 65 && chuoi.charCodeAt(i) <= 90) mang[i] = mang[i].toLowerCase();
+            else if (chuoi.charCodeAt(i) >= 97 && chuoi.charCodeAt(i) <= 122) mang[i] = mang[i].toUpperCase();
+        }
+        document.write("Mảng sau khi định dạng chữ thường và hoa ngược lại với chuỗi ban đầu là: " + mang.join(""));
+    }
+</script>
+</body>
+</html>

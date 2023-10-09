@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Làm việc với mảng 1</title>
+</head>
+<body>
+<script>
+    let mang=[];
+    let giaTri= +prompt("Nhập giá trị phần tử của mảng (số nguyên)(Nhập chữ để thoát):");
+    while(!isNaN(giaTri)){
+        mang.push(giaTri);
+        giaTri= +prompt("Nhập giá trị phần tử của mảng (số nguyên)(Nhập chữ để thoát):")
+    }
+    let tongSoLe=0;
+    for (i=0;i<mang.length;i++){
+        if (mang[i]%2!==0 && mang[i]>0) tongSoLe+= mang[i];
+    }
+    document.write("Tổng của các số nguyên dương lẻ trong mảng là: "+tongSoLe+"<br>");
+    let tongSoNguyenTo=0;
+    for (i=0;i<mang.length;i=i+2){
+        let count=0;
+        for (j=1;j<=mang[i];j++){
+            if (mang[i]%j===0) count++;
+        }
+        if (count===2) tongSoNguyenTo+= mang[i];
+    }
+    document.write("Tổng của các số nguyên tố ở vị trí chắn trong mảng là: "+tongSoNguyenTo+"<br>");
+    let k= +prompt("Nhập số k cần kiểm tra sự tồn tại trong mảng:");
+    for (i=0;i<mang.length;i++){
+        if (k===mang[i]){
+            document.write(k+" có trong mảng và vị trí đầu tiên xuất hiện là "+i+"<br>");
+            break
+        }
+        else if (i===mang.length-1) document.write("Số "+k+" không tồn tại trong mảng!"+"<br>");
+        }
+    let mangSau= mang.sort((a,b)=>a-b);
+    document.write("Mảng sau khi sắp xếp là: " + mangSau + "<br>");
+    let phanTuThem= +prompt("Nhập phần tử cần thêm vào mảng (số nguyên)(Nhập chữ để thoát):");
+    let mangThem=[];
+    while (!isNaN(phanTuThem)){
+        mangThem.push(phanTuThem);
+        phanTuThem= +prompt("Nhập phần tử cần thêm vào mảng (số nguyên)(Nhập chữ để thoát):");
+    }
+    mangSauThem= mangSau.concat(mangThem);
+    mangSauThem.sort((a,b)=>a-b);
+    document.write("Mảng sau khi thêm các phần tử vào: "+mangSauThem);
+</script>
+</body>
+</html>
