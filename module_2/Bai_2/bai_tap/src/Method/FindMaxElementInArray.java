@@ -1,6 +1,8 @@
+package Method;
+
 import java.util.Scanner;
 
-public class TimPhanTuLonNhatTrongMang2Chieu {
+public class FindMaxElementInArray {
     public static void main(String[] args) {
         byte lengthArray;
         byte lengthValue;
@@ -19,7 +21,9 @@ public class TimPhanTuLonNhatTrongMang2Chieu {
         byte max = array2D[0][0];
         for (byte i = 0; i < array2D.length; i++) {
             for (byte j = 0; j < array2D[i].length; j++) {
-                if (array2D[i][j] > max) max = array2D[i][j];
+                if (array2D[i][j] > max) {
+                    max = array2D[i][j];
+                }
             }
         }
         System.out.println("Phần tử lớn nhất trong mảng 2 chiều ban đầu là: " + max);

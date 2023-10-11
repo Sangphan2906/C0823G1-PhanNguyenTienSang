@@ -1,9 +1,12 @@
+package Loop_and_Array;
+
 import java.util.Scanner;
 
 public class CombinedArrays {
     public static void main(String[] args) {
         byte length1;
         byte length2;
+        byte j = 0;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập độ dài của mảng 1:");
         length1 = scanner.nextByte();
@@ -24,14 +27,17 @@ public class CombinedArrays {
         for (byte i = 0; i < array1.length; i++) {
             arrayCombined[i] = array1[i];
         }
-        byte j = 0;
         for (int i = array1.length; i < arrayCombined.length; i++) {
             arrayCombined[i] = array2[j];
             j++;
         }
         for (byte i = 0; i < arrayCombined.length; i++) {
-            if (i == arrayCombined.length - 1) System.out.print(arrayCombined[i] + ".");
-            else System.out.print(arrayCombined[i] + ", ");
+            if (i == arrayCombined.length - 1) {
+                System.out.print(arrayCombined[i] + ".");
+            }
+            else {
+                System.out.print(arrayCombined[i] + ", ");
+            }
         }
     }
 }

@@ -1,6 +1,8 @@
+package Method;
+
 import java.util.Scanner;
 
-public class TimGiaTriNhoNhatTrongMang {
+public class FindMinValueInArray {
     public static void main(String[] args) {
         byte length;
         Scanner scanner = new Scanner(System.in);
@@ -13,7 +15,9 @@ public class TimGiaTriNhoNhatTrongMang {
         }
         byte min = array[0];
         for (byte i = 0; i < array.length; i++) {
-            if (min > array[i]) min = array[i];
+            if (min > array[i]) {
+                min = array[i];
+            }
         }
         System.out.println("Giá trị nhỏ nhất trong mảng là: " + min);
     }
